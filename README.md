@@ -1,27 +1,3 @@
-# Module 3
-
-## Amazon  web services
-* Compute service
-* DB service
-* Security, Identity and Compliance
-* Storage
-* Management and Governance
-* Cost management
-* Networking and Content delivery service
-* ...
-
-\
-
-A web server can be created using Amazon EC2 (VM) or AWS Lambda (function executer), AWS Elastic Beanstalk (platform based).
-
-### Interact
-* AWS management console
-* AWS CLI
-* SDKs
-
-### Cost calculator
-* AWS Pricing calculator
-
 # Module 1
 Cloud computing is the on-demand delivery of IT resources via the internet with a "pay-as-you-go" pricing. \
 Almost enything you can implement with traditional IT can be implemented as an AWS cloud computing service.
