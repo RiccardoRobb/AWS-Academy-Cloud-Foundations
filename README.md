@@ -28,7 +28,7 @@ Almost enything you can implement with traditional IT can be implemented as an A
 -------------------------------------------
 
 ## What's AWS?
-AWS is a "secure cloud platform" that offers a broad set of global cloud-based products, offers flexibility, provides on-demand access to many IT resources and management tools. \
+AWS is a "secure cloud platform" that offers a broad set of global cloud-based products, offers flexibility, provides on-demand access to many IT resources and management tools.
 
 ### Simple example of a database application
 Costumers send data to Amazon EC2 instances. \
