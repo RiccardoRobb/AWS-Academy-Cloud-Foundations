@@ -26,8 +26,8 @@ Almost enything you can implement with traditional IT can be implemented as an A
   
 * **On-Premises** \
     "private cloud", provides dedicated resources using virtualization ans resource management tools
-  
-  
+
+---------------------------------
 
 #### Similarities between AWS and traditional IT
 
@@ -42,14 +42,11 @@ Almost enything you can implement with traditional IT can be implemented as an A
 
 **AWS** is a "secure cloud platform" that offers a broad set of global cloud-based products, offers <u>flexibility</u>, provides <u>on-demand access to many IT resources</u> and <u>management tools</u>.
 
-#### Simple example of a database application
+### Simple example of a database application
 
-Costumers send data to Amazon EC2 instances.
-
-EC2 servers batch the data and add an object per costumer to Amazon S3. 
-
-To build an index we can use a simple nonrelational database like Amazon DynamoDB. 
-
+Costumers send data to Amazon EC2 instances. \
+EC2 servers batch the data and add an object per costumer to Amazon S3.  \
+To build an index we can use a simple nonrelational database like Amazon DynamoDB. \
 We can run these services inside an Amazon Virtual Private Cloud (VPC).
 
 ### Services
