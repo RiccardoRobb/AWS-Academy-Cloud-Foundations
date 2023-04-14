@@ -298,8 +298,8 @@ A business can replicate data across Regions, this decision is based on data gov
   * **KMS**, create and manage keys. *Encryption* across AWS services.
   
   * **Shield**, is a managed *DDoS protection* for applications on AWS.
-  
-  * 
+    
+    
 
 * <mark>**storage**</mark>
   
@@ -322,3 +322,19 @@ A business can replicate data across Regions, this decision is based on data gov
   * **Redshift**, allows to run *analytic queries on petabytes of data* in Redshift, against *exabityes of data* on S3.
   
   * **DynamoDB**, is a *key-value* and *document* database, with backup and restore, and in-memory caching.
+
+
+
+-----------------
+
+----------------
+
+
+
+# Module 4
+
+## Service characteristics and security reponsibility
+
+Every service intended as **IaaS**, for example *EC2*, *<u>require the customer to perform all the necessary security configuration and management tasks</u>*. For every **PaaS** instead it is not required.
+
+For best practices for running a *Oracle Database* see [this](https://docs.aws.amazon.com/whitepapers/latest/oracle-database-aws-best-practices/oracle-database-aws-best-practice.html).
