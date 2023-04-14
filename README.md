@@ -2,12 +2,12 @@
 
 Cloud computing is the on-demand delivery of IT resources via the internet with a *"pay-as-you-go"* pricing.
 
-Almost enything you can implement with traditional IT can be implemented as an AWS cloud computing service.
+Almost anything you can implement with traditional IT can be implemented as an AWS cloud computing service.
 
 ## Cloud service models
 
 * <mark>IaaS</mark> **"Infrastructure as a service"** \
-    networking featrues, Hw or VMs and data storage space
+    networking features, Hw or VMs and data storage space
 * <mark>PaaS</mark> **"Platform as a service"** \
     no need to manage the underlying infrastructure Hw or Sw
 * <mark>SaaS</mark> **"Software as a service"** \
@@ -16,11 +16,11 @@ Almost enything you can implement with traditional IT can be implemented as an A
 ## Cloud computing deployment models
 
 * **Cloud** \
-    all the parts of the application run in the cloud, can be built using low-level infrastructure pieces or higher-level services that provide abstaction from management, architecting and scaling requirements of core infrastructure
+    all the parts of the application run in the cloud, can be built using low-level infrastructure pieces or higher-level services that provide abstraction from management, architecting and scaling requirements of core infrastructure
 
 * **Hybrid** \
     allows organizations to extend and grow their infrastructure into the cloud while connecting cloud resources to internal systems
-    "ususally between the cloud and existing on-premises infra"
+    "usually between the cloud and existing on-premises infra"
 
 * **On-Premises** \
     "private cloud", provides dedicated resources using virtualization ans resource management tools
@@ -44,20 +44,20 @@ Almost enything you can implement with traditional IT can be implemented as an A
 
 Costumers send data to Amazon EC2 instances. \
 EC2 servers batch the data and add an object per costumer to Amazon S3.  \
-To build an index we can use a simple nonrelational database like Amazon DynamoDB. \
+To build an index we can use a simple non-relational database like Amazon DynamoDB. \
 We can run these services inside an Amazon Virtual Private Cloud (VPC).
 
 ### Services
 
 * **EC2** , control over your AWS computing resources
 
-* **Lambda**, run code without caring about servers maintance
+* **Lambda**, run code without caring about servers maintenance
 
 * **Elastic Beanstalk**, deploy, manage and scale web applications
 
 * **Lightsail**, lightweight cloud platform for simple web applications
 
-* **Batch**, manage and run hundread of thousands of batch workloads
+* **Batch**, manage and run hundred of thousands of batch workloads
 
 * **Outposts**, run AWS infrastructure in your On-Premises data center
 
@@ -73,7 +73,7 @@ We can run these services inside an Amazon Virtual Private Cloud (VPC).
 
 ### Interact with AWS
 
-* **Management console**, graphical interface prensent on AWS
+* **Management console**, graphical interface present on AWS
 
 * **Command line interface**, command script that can be used locally
 
@@ -88,10 +88,10 @@ We can run these services inside an Amazon Virtual Private Cloud (VPC).
 ### Perspectives
 
 * **Business** \
-  Stakeholder from the business perspective can use the CAF to create a stong business case for cloud adoption.
+  Stakeholder from the business perspective can use the CAF to create a strong business case for cloud adoption.
 
 * **People** \
-  CAF can be used to evaluate organizational structures and roles, new skills and process requirememnts and identify gaps.
+  CAF can be used to evaluate organizational structures and roles, new skills and process requirements and identify gaps.
 
 * **Governance** \
   Focus on the skills and processes that are needed to align IT strategy and goals with business strategy and goals.
@@ -103,7 +103,7 @@ We can run these services inside an Amazon Virtual Private Cloud (VPC).
   CAF allows to structure the selection and implementation of security controls that meet the organization's needs.
 
 * **Operations** \
-  Define current operationg procedures, in order to identify the process changes and training that are needed to implement successful cloud adoption.
+  Define current operation procedures, in order to identify the process changes and training that are needed to implement successful cloud adoption.
 
 -----------------------
 
@@ -169,7 +169,7 @@ Is the financial estimate to help identify *direct* and *indirect* costs of a sy
 
 It's useful to **compare** the costs of running an entire infrastructure environment or specific workload on AWS or using an On-Premises solution.
 
-Can be a good indicator to **budget** and build the bussiness case for moving to the cloud.
+Can be a good indicator to **budget** and build the business case for moving to the cloud.
 
 ##### Parameters:
 
@@ -185,7 +185,7 @@ Can be a good indicator to **budget** and build the bussiness case for moving to
 
 ### AWS pricing calculator
 
-Helps you to estimate a <u>monthly</u> AWS bill, identify opportunity for cost reduction, model your solution befor building them and explore price points and calculations.
+Helps you to estimate a <u>monthly</u> AWS bill, identify opportunity for cost reduction, model your solution before building them and explore price points and calculations.
 
 https://calculator.aws/#/
 
@@ -197,7 +197,7 @@ Defines what will be spent on the technology after adoption, or what it costs to
 
 ##### Parameters:
 
-* **soft saving**, reuse service or applications, increase developer productivity, *Agile* bussiness processes and increase global reach
+* **soft saving**, reuse service or applications, increase developer productivity, *Agile* business processes and increase global reach
 
 * **hard savings**, reduce server costs, storage costs, network costs and personnel
 
@@ -217,7 +217,7 @@ Is a free account management service that enables you to consolidate multiple AW
 
 #### Organization utilities
 
-* **Service control policies** (SCPs), allows to control AWS servicies across multiple AWS accounts, **<u>this does not replace IAM</u>**
+* **Service control policies** (SCPs), allows to control AWS services across multiple AWS accounts, **<u>this does not replace IAM</u>**
 
 * **Account groups**, OUs
 
@@ -255,7 +255,7 @@ A business can replicate data across Regions, this decision is based on data gov
   
   - **ECS**, is a powerful *container-orchestation* service that supports Docker containers.
   
-  - **ECR**, is a *Docker container registry*, to easly store, manage and deploy Docker container images.
+  - **ECR**, is a *Docker container registry*, to easily store, manage and deploy Docker container images.
   
   - **Ekastic beanstalk**, allows to deploy ans scale web applications ans services, using *Apache* and *Microsoft IIS*.
   
@@ -271,7 +271,7 @@ A business can replicate data across Regions, this decision is based on data gov
   
   * **VPC**, enables you to provision logically isolated sections of the AWS Cloud.
   
-  * **Elastic load balancing**, distribuites incoming appication traffic across multiple targets.
+  * **Elastic load balancing**, distribuites incoming application traffic across multiple targets.
   
   * **CloudFront**, is a fast *content delivery service* (CDN).
   
@@ -289,7 +289,7 @@ A business can replicate data across Regions, this decision is based on data gov
   
   * **IAM**, manages access to AWS services and resources securely, allows to *create and manage AWS users and groups*.
   
-  * **Organizations**, resticts what services asn actions are allowed in your accounts.
+  * **Organizations**, restricts what services and actions are allowed in your accounts.
   
   * **Cognito**, *add sign-up sign-in* to your mobile or web applications.
   
@@ -303,9 +303,9 @@ A business can replicate data across Regions, this decision is based on data gov
 
 * <mark>**storage**</mark>
   
-  - **S3**, used for any amount of data, usally for websites, mobile apps, backup and restore, archive, enterprise applications, IoT and big data analytics
+  - **S3**, used for any amount of data, usually for websites, mobile apps, backup and restore, archive, enterprise applications, IoT and big data analytics
   
-  - **EBS**, used for relational and non-realtional databases, containers, big data analytics engines, file systems and media workflows.
+  - **EBS**, used for relational and non-relational databases, containers, big data analytics engines, file systems and media workflows.
   
   - **EFS**, used to scale demand to *petabytes*, provides an *elastic network file system* (NFS) to use with AWS cloud services and On-Premises  resources.
   
@@ -317,7 +317,7 @@ A business can replicate data across Regions, this decision is based on data gov
   
   * **RDS**, allows to create, operate and scale *relational databases*.
   
-  * **Aurora**, is a *MySQL* and *PostgreQL* compatible relational database (more efficent and speedy).
+  * **Aurora**, is a *MySQL* and *PostgreQL* compatible relational database (more efficient and speedy).
   
   * **Redshift**, allows to run *analytic queries on petabytes of data* in Redshift, against *exabityes of data* on S3.
   
@@ -333,7 +333,7 @@ A business can replicate data across Regions, this decision is based on data gov
 
 # Module 4
 
-### Service characteristics and security reponsibility
+### Service characteristics and security responsibility
 
 Every service intended as **IaaS**, for example *EC2*, *<u>require the customer to perform all the necessary security configuration and management tasks</u>*. For every **PaaS** instead it is not required.
 
@@ -383,7 +383,7 @@ We can also add **IAM MFA** to increase the security.
 
 #### Policies
 
-* **Identity-based**, attach a policy to any IAM entity (user/group/role), listing all the actions an entity can or cannot perfom; a single policy can be attached to multiple entities and every entity can have multiple policies.
+* **Identity-based**, attach a policy to any IAM entity (user/group/role), listing all the actions an entity can or cannot perform; a single policy can be attached to multiple entities and every entity can have multiple policies.
 
 * **Resource-based**, attached to a resource, for example S3 bucket.
 
@@ -403,7 +403,7 @@ The ROOT account used to create and manage all the services used in AWS cannot b
 
 ## AWS compliance programs
 
-Provide information about the policies, processes and controls that are enstablished and operand by AWS. We can use tools like **AWS config** to assess, audit and evaluate the configurations of AWS; also **AWS artfact** can be used to see security and compliance reports.
+Provide information about the policies, processes and controls that are established and operand by AWS. We can use tools like **AWS config** to assess, audit and evaluate the configurations of AWS; also **AWS artifact** can be used to see security and compliance reports.
 
 -------------------------------
 
