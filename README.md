@@ -70,3 +70,50 @@ We can run these services inside an Amazon Virtual Private Cloud (VPC).
 * **Fargate**, implement a containers or *microservice* architecture
 
 * **VMware cloud**, migrate to AWS your On-Premises server virtualization platform
+
+### 
+
+### Interact with AWS
+
+* **Management console**, graphical interface prensent on AWS
+
+* **Command line interface**, command script that can be used locally
+
+* **SDKs**, packages to access AWS
+  
+  
+  
+
+-------------------------------
+
+## AWS Cloud Adoption Framework
+
+**AWS CAF** provides guidance and best practices to help organizations build a cloud computing architecture across the organization and throughout the IT lifecycle.
+
+### Perspectives
+
+* **Business** \
+  Stakeholder from the business perspective can use the CAF to create a stong business case for cloud adoption.
+
+* **People** \
+  CAF can be used to evaluate organizational structures and roles, new skills and process requirememnts and identify gaps.
+
+* **Governance** \
+  Focus on the skills and processes that are needed to align IT strategy and goals with business strategy and goals.
+
+* **Platform** \
+  CAF includes principles and patterns for implementing new solutions on the cloud, and for migrating On-Premises workload to the cloud.
+
+* **Security** \
+  CAF allows to structure the selection and implementation of security controls that meet the organization's needs.
+
+* **Operations** \
+  Define current operationg procedures, in order to identify the process changes and training that are needed to implement successful cloud adoption.
+
+-----------------------
+
+--------------------
+
+
+
+# Module 2
