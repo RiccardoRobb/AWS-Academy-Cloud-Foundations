@@ -247,7 +247,7 @@ A business can replicate data across Regions, this decision is based on data gov
 
 ## AWS foundational services
 
-* <mark>compute</mark>
+* <mark>**compute**</mark>
   
   - **EC2**, acts as virtual machines in the cloud.
   
@@ -264,10 +264,44 @@ A business can replicate data across Regions, this decision is based on data gov
   - **EKS**, make it easy to deploy, manage and scale, containerized applications that use *Kubernetes*.
   
   - **Fargate**, allows to run containers (ECS) without having to manage servers or clusters.
+    
+    
 
-* <mark>networking</mark>
+* <mark>**networking**</mark>
+  
+  * **VPC**, enables you to provision logically isolated sections of the AWS Cloud.
+  
+  * **Elastic load balancing**, distribuites incoming appication traffic across multiple targets.
+  
+  * **CloudFront**, is a fast *content delivery service* (CDN).
+  
+  * **Transit gateway**, allow to connect *VPCs with On-Premises networks*.
+  
+  * **Route 53**, is a *DNS* service.
+  
+  * **Direct connect**, allows to create a *dedicated private network connection* from your data center to AWS.
+  
+  * **VPN** from your network or device to the AWS global network. 
+    
+    
 
-* <mark>storage</mark>
+* **<mark>security, identity and compliance</mark>**
+  
+  * **IAM**, manages access to AWS services and resources securely, allows to *create and manage AWS users and groups*.
+  
+  * **Organizations**, resticts what services asn actions are allowed in your accounts.
+  
+  * **Cognito**, *add sign-up sign-in* to your mobile or web applications.
+  
+  * **Artifact**, provides an on-demand access to AWS security and compliance reports.
+  
+  * **KMS**, create and manage keys. *Encryption* across AWS services.
+  
+  * **Shield**, is a managed *DDoS protection* for applications on AWS.
+  
+  * 
+
+* <mark>**storage**</mark>
   
   - **S3**, used for any amount of data, usally for websites, mobile apps, backup and restore, archive, enterprise applications, IoT and big data analytics
   
@@ -276,7 +310,15 @@ A business can replicate data across Regions, this decision is based on data gov
   - **EFS**, used to scale demand to *petabytes*, provides an *elastic network file system* (NFS) to use with AWS cloud services and On-Premises  resources.
   
   - **Simple storage service Glacier**, for archiving *long-term backups*.
+    
+    
 
-* <mark>database</mark>
+* <mark>**database**</mark>
   
-  * 
+  * **RDS**, allows to create, operate and scale *relational databases*.
+  
+  * **Aurora**, is a *MySQL* and *PostgreQL* compatible relational database (more efficent and speedy).
+  
+  * **Redshift**, allows to run *analytic queries on petabytes of data* in Redshift, against *exabityes of data* on S3.
+  
+  * **DynamoDB**, is a *key-value* and *document* database, with backup and restore, and in-memory caching.
