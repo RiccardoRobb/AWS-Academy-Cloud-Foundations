@@ -228,3 +228,55 @@ Is a free account management service that enables you to consolidate multiple AW
 
 
 You can see more about "Setup an organization" and "IAM simulator" [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_testing-policies.html)
+
+
+
+------
+
+-----
+
+
+
+# Module 3
+
+AWS Cloud infrastructure is built around **Regions**, there are 22 regions worldwide. An AWS Region is a physical geographical location with one or more *Availability zone* (data centers).
+
+A business can replicate data across Regions, this decision is based on data governance and legal requirements. It is important to consider the **latency**, you can use [this](https://www.cloudping.info/).
+
+
+
+## AWS foundational services
+
+* <mark>compute</mark>
+  
+  - **EC2**, acts as virtual machines in the cloud.
+  
+  - **EC2 autoscaling**, allows to create or remove EC2 instances.
+  
+  - **ECS**, is a powerful *container-orchestation* service that supports Docker containers.
+  
+  - **ECR**, is a *Docker container registry*, to easly store, manage and deploy Docker container images.
+  
+  - **Ekastic beanstalk**, allows to deploy ans scale web applications ans services, using *Apache* and *Microsoft IIS*.
+  
+  - **Lambda**, allows to *run code* without managing servers, you pay only for the compute time.
+  
+  - **EKS**, make it easy to deploy, manage and scale, containerized applications that use *Kubernetes*.
+  
+  - **Fargate**, allows to run containers (ECS) without having to manage servers or clusters.
+
+* <mark>networking</mark>
+
+* <mark>storage</mark>
+  
+  - **S3**, used for any amount of data, usally for websites, mobile apps, backup and restore, archive, enterprise applications, IoT and big data analytics
+  
+  - **EBS**, used for relational and non-realtional databases, containers, big data analytics engines, file systems and media workflows.
+  
+  - **EFS**, used to scale demand to *petabytes*, provides an *elastic network file system* (NFS) to use with AWS cloud services and On-Premises  resources.
+  
+  - **Simple storage service Glacier**, for archiving *long-term backups*.
+
+* <mark>database</mark>
+  
+  * 
