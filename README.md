@@ -17,13 +17,11 @@ Almost enything you can implement with traditional IT can be implemented as an A
 
 * **Cloud** \
     all the parts of the application run in the cloud, can be built using low-level infrastructure pieces or higher-level services that provide abstaction from management, architecting and scaling requirements of core infrastructure
-  
-  
+
 * **Hybrid** \
     allows organizations to extend and grow their infrastructure into the cloud while connecting cloud resources to internal systems
     "ususally between the cloud and existing on-premises infra"
-  
-  
+
 * **On-Premises** \
     "private cloud", provides dedicated resources using virtualization ans resource management tools
 
@@ -31,10 +29,10 @@ Almost enything you can implement with traditional IT can be implemented as an A
 
 #### Similarities between AWS and traditional IT
 
-* AWS security groups, network ACLs, AWS identity and IAM <-> firewalls, ACLs and administrators
-* Elastic load balancing, Amazon VPC <-> routers, network pipelines and switches
-* AMIs and Amazon EC2 <-> On-Premises servers
-* Amazon EBS, Amazon EFS, Amazon S3 and Amazon RDS <-> DAS, SAN, NAS and RDBMS  
+* AWS security groups, network ACLs, AWS identity and IAM >< firewalls, ACLs and administrators
+* Elastic load balancing, Amazon VPC >< routers, network pipelines and switches
+* AMIs and Amazon EC2 >< On-Premises servers
+* Amazon EBS, Amazon EFS, Amazon S3 and Amazon RDS >< DAS, SAN, NAS and RDBMS  
 
 -------------------------------------------
 
@@ -80,9 +78,6 @@ We can run these services inside an Amazon Virtual Private Cloud (VPC).
 * **Command line interface**, command script that can be used locally
 
 * **SDKs**, packages to access AWS
-  
-  
-  
 
 -------------------------------
 
@@ -114,8 +109,6 @@ We can run these services inside an Amazon Virtual Private Cloud (VPC).
 
 --------------------
 
-
-
 # Module 2
 
 Pay only for the services that you consume, there are many ways to pay less, you can use **Reserved Instances** (bundle-like): *AURI, PURI and NURI*.
@@ -139,8 +132,6 @@ There are 3 fundamental drivers of cost with AWS:
 
 -----------------
 
-
-
 ### Services with no charge
 
 * **VPC**
@@ -154,3 +145,86 @@ There are 3 fundamental drivers of cost with AWS:
 * **CloudFormation**
 
 * **OpsWorks**
+
+-----------------
+
+
+
+### On-Premises Vs Cloud
+
+The difference between these two is how they are deployed.
+
+- *On-Premises* infrastructure is installed <u>_locally_</u> on a company's own computer and servers.
+  
+  * **fixed costs / capital expenses** like facilities, hardware, licenses and maintenance
+  
+  * **difficult to scale**
+* *Cloud* infrastructure is purchased from a service provide, so there are <u>no capital expenses</u>  and there are costs only for new tools or upgrade (scaling).
+
+
+
+#### Total cost of Ownership (<mark>TCO</mark>)
+
+Is the financial estimate to help identify *direct* and *indirect* costs of a system.
+
+It's useful to **compare** the costs of running an entire infrastructure environment or specific workload on AWS or using an On-Premises solution.
+
+Can be a good indicator to **budget** and build the bussiness case for moving to the cloud.
+
+##### Parameters:
+
+* **Server costs**
+
+* **Storage costs**
+
+* **Network costs**
+
+* **IT labor costs**
+
+----------------
+
+### AWS pricing calculator
+
+Helps you to estimate a <u>monthly</u> AWS bill, identify opportunity for cost reduction, model your solution befor building them and explore price points and calculations.
+
+https://calculator.aws/#/
+
+
+
+#### Cloud total cost of Ownership (<mark>CTCO</mark>)
+
+Defines what will be spent on the technology after adoption, or what it costs to run the solution. Different from TCO, because Total cost of Ownership is used for On-Premises solutions.
+
+##### Parameters:
+
+* **soft saving**, reuse service or applications, increase developer productivity, *Agile* bussiness processes and increase global reach
+
+* **hard savings**, reduce server costs, storage costs, network costs and personnel
+
+------------------------
+
+
+
+## AWS organizations
+
+Is a free account management service that enables you to consolidate multiple AWS accounts into an **organization** that you create and manage.
+
+#### Teminology
+
+* **Organization units** (OU), are containers for accounts that can contain other OUs. We can define different <u>policies</u> for OUs or Accounts, each policy will affect all the children.
+
+
+
+#### Organization utilities
+
+* **Service control policies** (SCPs), allows to control AWS servicies across multiple AWS accounts, **<u>this does not replace IAM</u>**
+
+* **Account groups**, OUs
+
+* **Single payment system**, we can pay a single bill for all the accounts
+
+* **API** to manage and control accounts
+
+
+
+You can see more about "Setup an organization" and "IAM simulator" [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_testing-policies.html)
