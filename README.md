@@ -333,8 +333,82 @@ A business can replicate data across Regions, this decision is based on data gov
 
 # Module 4
 
-## Service characteristics and security reponsibility
+### Service characteristics and security reponsibility
 
 Every service intended as **IaaS**, for example *EC2*, *<u>require the customer to perform all the necessary security configuration and management tasks</u>*. For every **PaaS** instead it is not required.
 
 For best practices for running a *Oracle Database* see [this](https://docs.aws.amazon.com/whitepapers/latest/oracle-database-aws-best-practices/oracle-database-aws-best-practice.html).
+
+In short we can say that AWS is responsible for security **of** the cloud, instead the user is responsible for the security **in** the cloud.
+
+
+
+## AWS Identity and Access management (IAM)
+
+Allows you to control access to compute, storage, database, and application services in the AWS Cloud. IAM can be used to *handle authentication*, and to specify or enforce *authorization policies*, in order to specify which user can access which service.
+
+**Best practice:** <u>follow the principle of least privilege</u>
+
+#### Fine-grained access rights
+
+- **who** can access the resource
+
+- **which** resource can be accessed and what can the user do whit it
+
+- **how** resources can be accessed
+
+
+
+#### Components
+
+* **user**, person or application that can authenticate with an AWS account
+
+* **group**, a collection of IAM users that are granted identical authorization
+
+* **policy**, a document that defines *which resource can be accessed + level od access*
+
+* **role**, mechanism to grant a set of permissions
+
+
+
+#### Authenticate as a IAM user to gain access
+
+When we define an IAM user, we define also the *types of access*.
+
+A user can access using **Programmatic access** (API) using <u>access key ID</u> and <u>secret access key</u>. Or can access using a "login page" called **Management console access** using <u>12-digit account ID / alias</u> and <u>IAM username + IAM password</u>.
+
+We can also add **IAM MFA** to increase the security.
+
+
+
+#### Policies
+
+* **Identity-based**, attach a policy to any IAM entity (user/group/role), listing all the actions an entity can or cannot perfom; a single policy can be attached to multiple entities and every entity can have multiple policies.
+
+* **Resource-based**, attached to a resource, for example S3 bucket.
+
+
+
+You can access the IAM Policy simulator [here](https://policysim.aws.amazon.com/).
+
+
+
+#### Securing a new AWS account
+
+The ROOT account used to create and manage all the services used in AWS cannot be limited by policies, so we need to secure it in different ways. To secure the account, we must use it all if <u>strictly necessary</u>, allow the <u>MFA</u> for the account, activate <u>CloudTrail</u> to track user activity and keep an eye on the <u>billing reports</u>.
+
+
+
+--------------
+
+## AWS compliance programs
+
+Provide information about the policies, processes and controls that are enstablished and operand by AWS. We can use tools like **AWS config** to assess, audit and evaluate the configurations of AWS; also **AWS artfact** can be used to see security and compliance reports.
+
+-------------------------------
+
+---------------
+
+
+
+# Module 5
