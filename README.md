@@ -117,3 +117,40 @@ We can run these services inside an Amazon Virtual Private Cloud (VPC).
 
 
 # Module 2
+
+Pay only for the services that you consume, there are many ways to pay less, you can use **Reserved Instances** (bundle-like): *AURI, PURI and NURI*.
+
+There are also many "Volume-based" discounts, based on the usage increase.
+For example S3 pricing is tiered, so you pay less per GB when you use more.
+
+There are 3 fundamental drivers of cost with AWS:
+
+* **compute** charged per hr/sec, varies by instance type
+
+* **storage** charged per GB
+
+* **data transfer** charged per GB
+
+----------------
+
+#### AWS Free tier
+
+[Free AWS cloud services](https://aws.amazon.com/it/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all)
+
+-----------------
+
+
+
+### Services with no charge
+
+* **VPC**
+
+* **IAM**
+
+* **Automatic scaling**
+
+* **Elastic beanstalk**
+
+* **CloudFormation**
+
+* **OpsWorks**
