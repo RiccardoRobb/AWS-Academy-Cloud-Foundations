@@ -148,8 +148,6 @@ There are 3 fundamental drivers of cost with AWS:
 
 -----------------
 
-
-
 ### On-Premises Vs Cloud
 
 The difference between these two is how they are deployed.
@@ -160,8 +158,6 @@ The difference between these two is how they are deployed.
   
   * **difficult to scale**
 * *Cloud* infrastructure is purchased from a service provide, so there are <u>no capital expenses</u>  and there are costs only for new tools or upgrade (scaling).
-
-
 
 #### Total cost of Ownership (<mark>TCO</mark>)
 
@@ -189,8 +185,6 @@ Helps you to estimate a <u>monthly</u> AWS bill, identify opportunity for cost r
 
 https://calculator.aws/#/
 
-
-
 #### Cloud total cost of Ownership (<mark>CTCO</mark>)
 
 Defines what will be spent on the technology after adoption, or what it costs to run the solution. Different from TCO, because Total cost of Ownership is used for On-Premises solutions.
@@ -203,8 +197,6 @@ Defines what will be spent on the technology after adoption, or what it costs to
 
 ------------------------
 
-
-
 ## AWS organizations
 
 Is a free account management service that enables you to consolidate multiple AWS accounts into an **organization** that you create and manage.
@@ -212,8 +204,6 @@ Is a free account management service that enables you to consolidate multiple AW
 #### Teminology
 
 * **Organization units** (OU), are containers for accounts that can contain other OUs. We can define different <u>policies</u> for OUs or Accounts, each policy will affect all the children.
-
-
 
 #### Organization utilities
 
@@ -225,25 +215,17 @@ Is a free account management service that enables you to consolidate multiple AW
 
 * **API** to manage and control accounts
 
-
-
 You can see more about "Setup an organization" and "IAM simulator" [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_testing-policies.html)
-
-
 
 ------
 
 -----
-
-
 
 # Module 3
 
 AWS Cloud infrastructure is built around **Regions**, there are 22 regions worldwide. An AWS Region is a physical geographical location with one or more *Availability zone* (data centers).
 
 A business can replicate data across Regions, this decision is based on data governance and legal requirements. It is important to consider the **latency**, you can use [this](https://www.cloudping.info/).
-
-
 
 ## AWS foundational services
 
@@ -264,8 +246,6 @@ A business can replicate data across Regions, this decision is based on data gov
   - **EKS**, make it easy to deploy, manage and scale, containerized applications that use *Kubernetes*.
   
   - **Fargate**, allows to run containers (ECS) without having to manage servers or clusters.
-    
-    
 
 * <mark>**networking**</mark>
   
@@ -282,8 +262,6 @@ A business can replicate data across Regions, this decision is based on data gov
   * **Direct connect**, allows to create a *dedicated private network connection* from your data center to AWS.
   
   * **VPN** from your network or device to the AWS global network. 
-    
-    
 
 * **<mark>security, identity and compliance</mark>**
   
@@ -298,8 +276,6 @@ A business can replicate data across Regions, this decision is based on data gov
   * **KMS**, create and manage keys. *Encryption* across AWS services.
   
   * **Shield**, is a managed *DDoS protection* for applications on AWS.
-    
-    
 
 * <mark>**storage**</mark>
   
@@ -310,8 +286,6 @@ A business can replicate data across Regions, this decision is based on data gov
   - **EFS**, used to scale demand to *petabytes*, provides an *elastic network file system* (NFS) to use with AWS cloud services and On-Premises  resources.
   
   - **Simple storage service Glacier**, for archiving *long-term backups*.
-    
-    
 
 * <mark>**database**</mark>
   
@@ -323,13 +297,9 @@ A business can replicate data across Regions, this decision is based on data gov
   
   * **DynamoDB**, is a *key-value* and *document* database, with backup and restore, and in-memory caching.
 
-
-
 -----------------
 
 ----------------
-
-
 
 # Module 4
 
@@ -341,9 +311,7 @@ For best practices for running a *Oracle Database* see [this](https://docs.aws.a
 
 In short we can say that AWS is responsible for security **of** the cloud, instead the user is responsible for the security **in** the cloud.
 
-
-
-## AWS Identity and Access management (IAM)
+## AWS Identity and Access management (<mark>IAM</mark>)
 
 Allows you to control access to compute, storage, database, and application services in the AWS Cloud. IAM can be used to *handle authentication*, and to specify or enforce *authorization policies*, in order to specify which user can access which service.
 
@@ -357,8 +325,6 @@ Allows you to control access to compute, storage, database, and application serv
 
 - **how** resources can be accessed
 
-
-
 #### Components
 
 * **user**, person or application that can authenticate with an AWS account
@@ -369,8 +335,6 @@ Allows you to control access to compute, storage, database, and application serv
 
 * **role**, mechanism to grant a set of permissions
 
-
-
 #### Authenticate as a IAM user to gain access
 
 When we define an IAM user, we define also the *types of access*.
@@ -379,25 +343,17 @@ A user can access using **Programmatic access** (API) using <u>access key ID</u>
 
 We can also add **IAM MFA** to increase the security.
 
-
-
 #### Policies
 
 * **Identity-based**, attach a policy to any IAM entity (user/group/role), listing all the actions an entity can or cannot perform; a single policy can be attached to multiple entities and every entity can have multiple policies.
 
 * **Resource-based**, attached to a resource, for example S3 bucket.
 
-
-
 You can access the IAM Policy simulator [here](https://policysim.aws.amazon.com/).
-
-
 
 #### Securing a new AWS account
 
 The ROOT account used to create and manage all the services used in AWS cannot be limited by policies, so we need to secure it in different ways. To secure the account, we must use it all if <u>strictly necessary</u>, allow the <u>MFA</u> for the account, activate <u>CloudTrail</u> to track user activity and keep an eye on the <u>billing reports</u>.
-
-
 
 --------------
 
@@ -409,6 +365,58 @@ Provide information about the policies, processes and controls that are establis
 
 ---------------
 
-
-
 # Module 5
+
+## Networking basics
+
+A computer network is composed by two or more clients machines that are connected together, can be logically partitioned into *subnets*.
+
+Each machine in a network has a unique IP address, that can be *32-bit* long **IPv4** of *128-bit* long **IPv6**
+
+
+
+#### Classless Inter-Domain routing (CIDR)
+
+A CIDR address is composed by:
+
+* **IP** address
+
+* **/** "slash character"
+
+* **number**, tells you how many bits of the routing prefix must be fixed or allocated for the network identifier
+
+Is a way to express a group of IP addresses that are consecutive to each other. There are two special types:
+
+* *Fixed IP addresses*, for example `192.0.2.0/32` represents a single IP address, this can be useful when you want to set up a firewall rule
+
+* *The internet*, in which every byte is flexible `0.0.0.0/0`
+  
+  
+
+#### Open System interconnection model (OSI)
+
+Is a conceptual model used to explain <u>how data travels</u> over a network.
+
+| Layer        | #   | Function                                                            | Protocol/Address         |
+| ------------ | --- | ------------------------------------------------------------------- | ------------------------ |
+| Application  | 7   | Means for an application to access a computer network               | HTTP(S), FTP, DHCP, LDAP |
+| Presentation | 6   | Ensures that the application layer can read the data and Encryption | ASCI, ICA                |
+| Session      | 5   | Enables orderly exchange of data                                    | NetBIOS, RPC             |
+| Transport    | 4   | Protocols to support host-to-host communication                     | TCP, UDP                 |
+| Network      | 3   | Routing and packet forwarding (routers)                             | IP                       |
+| Data link    | 2   | Transfer data in the same LAN network                               | MAC                      |
+| Physical     | 1   | Transmission and reception of raw bitstreams                        | Signals                  |
+
+-------------------
+
+
+
+## Amazon Virtual private cloud (<mark>VPC</mark>)
+
+Lets you provision a logically isolated section of the AWS Cloud where you can launch your AWS resources. 
+
+* Selection of *IP address range*
+
+* Creation of *subnets*
+
+* Configuration of *route tables* and *network gateways*
