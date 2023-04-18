@@ -373,8 +373,6 @@ A computer network is composed by two or more clients machines that are connecte
 
 Each machine in a network has a unique IP address, that can be *32-bit* long **IPv4** of *128-bit* long **IPv6**
 
-
-
 #### Classless Inter-Domain routing (CIDR)
 
 A CIDR address is composed by:
@@ -390,8 +388,6 @@ Is a way to express a group of IP addresses that are consecutive to each other. 
 * *Fixed IP addresses*, for example `192.0.2.0/32` represents a single IP address, this can be useful when you want to set up a firewall rule
 
 * *The internet*, in which every byte is flexible `0.0.0.0/0`
-  
-  
 
 #### Open System interconnection model (OSI)
 
@@ -409,8 +405,6 @@ Is a conceptual model used to explain <u>how data travels</u> over a network.
 
 -------------------
 
-
-
 ## Amazon Virtual private cloud (<mark>VPC</mark>)
 
 Lets you provision a logically isolated section of the AWS Cloud where you can launch your AWS resources. 
@@ -421,8 +415,6 @@ Lets you provision a logically isolated section of the AWS Cloud where you can l
 
 * Configuration of *route tables* and *network gateways*
 
-
-
 #### VPCs
 
 Every VPC is *logically isolated* from other VPCs, it is dedicated to your AWS account and belongs to a single AWS Region and can span across multiple Availability Zones
@@ -432,3 +424,39 @@ Every VPC is *logically isolated* from other VPCs, it is dedicated to your AWS a
 #### Subnets
 
 *Range of IP addresses* that divide a VPC, belong to a single Availability Zone and can be *public* or *private*
+
+
+
+#### IP addressing
+
+When you create a VPC, you assign it to an **IPv4 CIDR block** (<u>range of private IPv4</u> addresses), this range cannot be changed. Every CIDR block can have a **max** size of `/16` and a **min** size of `/28`. CIDR blocks of subnets cannot overlap.
+
+Use this [reference](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html).
+
+* **reserved IP addresses**, for every CIDR block created, AWS reserves:
+  
+  * `x.x.x.0` network address
+  
+  * `x.x.x.1` internal communication
+  
+  * `x.x.x.2` DNS resolution
+  
+  * `x.x.x.3`  Future use
+  
+  * `x.x.x.255` network broadcast address
+
+* **Elastic IP address**
+  
+  Every Elastic IP address is associated with an AWS account, can be *allocated* and *remapped* anytime.
+  
+  Use this [reference](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html).
+
+* **public IP address**
+  
+  Can be *manually assigned* through an Elastic IP address or *automatically* assigned through the auto-assign public IP address settings at the subnet level.
+
+
+
+### Elastic network interface
+
+Is a *virtual network interface* that you can **attach** to an instance to redirect network traffic to it and **detach** it.
