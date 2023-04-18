@@ -459,4 +459,92 @@ Use this [reference](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-am
 
 ### Elastic network interface
 
-Is a *virtual network interface* that you can **attach** to an instance to redirect network traffic to it and **detach** it.
+Is a *virtual network interface* that you can **attach** to an instance to redirect network traffic to it and **detach** it. Each instance in your VPC has a default network interface that is assigned a private IPv4 address from the IPv4 address range of your VPC.
+
+Use this [reference](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html).
+
+
+
+#### Route tables and routes
+
+A route table contains a set of rules/routes that you can configure to direct network traffic from your subnet. Each rout specifies a destination and a target, by default every route table contains a *local route* for communication within the VPC. Each subnet must be associated with a route table (at most one).
+
+Use this [reference](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html).
+
+--------------
+
+#### Internet gateway
+
+Is a scalable, redundant and highly available VPC components that allows communication between instances in your VPC and the internet. Allows to **provide a target** in yout VPC route table for internet-routable traffic and to perform **network address translation** for instances that were assigned IPv4 addresses.
+
+Use this [reference](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html).
+
+### Network address translation (NAT) gateway
+
+Enables instances in a private subnet to connect to the internet or other AWS services, but prevents the internet from initiating a connection with those instances. To create a NAT gateway, you must specify the *public subnet* in which the NAT gateway should reside. You must also specify an Elastic IP address to associate with the NAT gateway, after you must update the route table that is associated with one or more of your private subnets to point inter-bound traffic to the NAT gateway.
+
+* NAT [gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html)
+
+* NAT [instances](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html)
+
+-----
+
+## VPC sharing
+
+The account that owns the VPC **(owner)** shares one or more subnets with other accounts **(participants)** that belong to the same organization, the participants can *view*, *create*, *modify* and *delete* their application resources in the subnets that are shared with them.
+
+Pros:
+
+* Separation of duties
+
+* Security groups
+
+## VPC peering
+
+Is a networking connection between two VPCs that enables you to route traffic between them privately. Instances in either VPC <u>can communicate</u> with each other as if they are within the <u>same network</u>.
+
+Restrictions:
+
+* IP address ranges **cannot overlap**
+
+* **transitive peering is not supported**
+
+* **only one** peering resource between the same two VPCs
+
+Use this for [reference](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-peering.html).
+
+--------
+
+### AWS Site-to-Site VPN
+
+By default, <u>instances that you launch into a VPC cannot communicate with remote network</u>.
+
+To connect your VPC to your remote network we need to create a [VPN connection](https://docs.aws.amazon.com/vpc/latest/userguide/vpn-connections.html).
+
+### AWS Direct connect
+
+AWS offers this service to establish a dedicated, private network connection between your network and one of the [AWS Direct connect](https://aws.amazon.com/directconnect/) locations, so that we can reduce network costs, increase bandwidth throughput and provide a more consistent network experience than internet-based connections. 
+
+This can be useful if your data center is located far away from your AWS Region.
+
+### AWS Transit Gateway
+
+For On-Premises connectivity you must attach your VPN to each individual VPC, this can be really hard and slow for many machines.
+
+Using the transit gateqay we only need to *create* and *manage* a single connection from the central gateway into each VPC.
+
+----
+
+## VPC endpoints
+
+Is a *virtual device* that enables you to privately connect your VPC to supported AWS services and VPC endpoint services that are powered by AWS PrivateLink.
+
+* **interface VPC endpoint**, enables you to connect to services that are powered by [AWS PrivateLink](https://docs.aws.amazon.com/vpc/latest/privatelink/create-interface-endpoint.html)
+
+* **gateway endpoint**
+
+## VPC security
+
+### Security group
+
+Acts as a *virtual firewall* for your instance, and it controls **inbound** and **outbound** traffic.  ~"filter for traffic to your instances"~ 
