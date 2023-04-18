@@ -420,3 +420,15 @@ Lets you provision a logically isolated section of the AWS Cloud where you can l
 * Creation of *subnets*
 
 * Configuration of *route tables* and *network gateways*
+
+
+
+#### VPCs
+
+Every VPC is *logically isolated* from other VPCs, it is dedicated to your AWS account and belongs to a single AWS Region and can span across multiple Availability Zones
+
+
+
+#### Subnets
+
+*Range of IP addresses* that divide a VPC, belong to a single Availability Zone and can be *public* or *private*
