@@ -531,7 +531,7 @@ This can be useful if your data center is located far away from your AWS Region.
 
 For On-Premises connectivity you must attach your VPN to each individual VPC, this can be really hard and slow for many machines.
 
-Using the transit gateqay we only need to *create* and *manage* a single connection from the central gateway into each VPC.
+Using the transit gateway we only need to *create* and *manage* a single connection from the central gateway into each VPC.
 
 ----
 
@@ -547,4 +547,68 @@ Is a *virtual device* that enables you to privately connect your VPC to supporte
 
 ### Security group
 
-Acts as a *virtual firewall* for your instance, and it controls **inbound** and **outbound** traffic.  ~"filter for traffic to your instances"~ 
+Acts as a *virtual firewall* for your instance, and it controls **inbound** and **outbound** traffic. * ~"filter for traffic to your instances" *
+
+Every security group has its *rules*, default groups **deny all <u>inbound</u> traffic** and **allow all outbound traffic**.
+
+[stateful]
+
+### Network access control lists (network ACLs)
+
+Every VPC can have this additional layer of security, are rules that are similar to "Security groups", each subnet can have its ACL.
+
+By default **inbound and outbound traffic is allowed**
+
+[stateless]
+
+Use this for [reference](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html).
+
+--------------------
+
+## Amazon Route 53
+
+Is a **Domain name system DNS** web service, is used to route end users to internet applications by translating names into numeric IP addresses. Connect user requests to infrastructure running in AWS and also outside, is used to check the health of your resources, features traffic flow and enables you to register domain names.
+
+Supported routing:
+
+* **Simple** routing, use in single-server environments
+
+* **Weighted round robin** routing, assign weights to resource record sets to specify the frequency
+
+* **Latency** routing, help improve your global applications
+
+* **Geolocation** routing, route traffic based on location of the users
+
+* **Geoproximity** routing, route traffic based on location of your resources
+
+* **Failover** routing, fail over to a backup site if your primary site becomes unreachable
+
+* **Multivalue answer** routing, respond to DNS queries with up to 8 healthy records selected at random
+
+## Amazon CloudFront
+
+Is a **Content delivery network CDN** service, is a globally distributed system of caching servers, *caches* copies of commonly requested files (static content), *delivers* a local copy of the requested content from a <u>nearby cache edge</u> (Point of Presence) and improves application performance and scaling.
+
+* **fast and global**
+
+* **security at the edge**
+
+* **highly programmable**
+
+* **cost-effective**
+  
+  Pricing:
+  
+  * *data transfer out* = <u>volume of data transferred out</u>
+  
+  * *HTTP(S) requests* = <u>#HTTP(S) requests</u>
+  
+  * *Invalidation requests* = after inval_req > 1000 $0.005 per path
+  
+  * *Dedicated IP custom SSL* = $600 per month
+
+--------------------------
+
+----------------------
+
+# Module 6
