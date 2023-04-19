@@ -419,13 +419,9 @@ Lets you provision a logically isolated section of the AWS Cloud where you can l
 
 Every VPC is *logically isolated* from other VPCs, it is dedicated to your AWS account and belongs to a single AWS Region and can span across multiple Availability Zones
 
-
-
 #### Subnets
 
 *Range of IP addresses* that divide a VPC, belong to a single Availability Zone and can be *public* or *private*
-
-
 
 #### IP addressing
 
@@ -455,15 +451,11 @@ Use this [reference](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-am
   
   Can be *manually assigned* through an Elastic IP address or *automatically* assigned through the auto-assign public IP address settings at the subnet level.
 
-
-
 ### Elastic network interface
 
 Is a *virtual network interface* that you can **attach** to an instance to redirect network traffic to it and **detach** it. Each instance in your VPC has a default network interface that is assigned a private IPv4 address from the IPv4 address range of your VPC.
 
 Use this [reference](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html).
-
-
 
 #### Route tables and routes
 
@@ -612,3 +604,25 @@ Is a **Content delivery network CDN** service, is a globally distributed system 
 ----------------------
 
 # Module 6
+
+## Amazon EC2
+
+Provides virtual machines where you can host the same kinds of applications that you might run on a traditional On-Premises server. **Elastic compute cloud** dives you full control over the *guest OS (Win/Linux)* on each instance, every instance can have a specified size into an Availability Zone. You can launch instances from **AMIs** and you can also control traffic *to* and *from* instances.
+
+### Amazon machine image (AMI)
+
+Provides information that is required to launch an EC2 instance, every instance need an AMI, you can use different AMIs for different types of instances.
+
+Is composed by: **templte for the root volume** of the instance (OS), **launch permissions** to control which AWS account can use the AMI and **block device mapping** that specifies the volume to attach to the instance.
+
+**Types:**
+
+* **Quickstart**, Win/Linux AMIs provided by AWS
+
+* **My AMIs**, AMIs created by the user
+
+* **Community AMIs**, AMIs shared by others
+
+* **AWS Marketplace**, pre-configured templates from third parties
+
+![EC2 types](/home/robb/Scrivania/AWS/pictures/EC2_types.png)
