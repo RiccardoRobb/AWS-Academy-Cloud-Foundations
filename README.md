@@ -625,6 +625,8 @@ Is composed by: **templte for the root volume** of the instance (OS), **launch p
 
 * **AWS Marketplace**, pre-configured templates from third parties
 
-![EC2 types](./pictures/EC2_types.png)
+<img src="./pictures/EC2_types.png" title="" alt="EC2 types" data-align="center">
 
 More info about different [types](https://aws.amazon.com/ec2/instance-types/)
+
+    
