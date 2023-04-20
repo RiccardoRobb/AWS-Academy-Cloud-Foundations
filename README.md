@@ -823,3 +823,123 @@ Supports web applications written in *Java*, *.NET*, *PHP*, *Node.js*, *Phyton*,
 --------
 
 # Modeule 7
+
+## Elastic Block store (EBS)
+
+Provides persistent block storage volumes for use with EC2 instances. Persistent storage is any data storage device that retains data after power to that device is shut off [**non-volatile storage**]. Every EBS volume is automatically replicated within its Availability Zone.
+
+Allows to create **point-in-time snapshots** of your volumes, and you can *re-create* a new volume from snapshot at any time. You can also propagate snapshots to different AWS Regions. You can also **encrypt** at no additional cost.
+
+ Types:
+
+<img src="./pictures/EBS_types.png" title="" alt="EBS types" data-align="center">
+
+Use this for [reference](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html).
+
+----
+
+## Simple Storage service (S3)
+
+Is an *object-level* storage, which means that if you want to change a part of the file, <u>you must make the change and then re-upload the entire modified file</u>. Data are stored as objects within resources that are called **buckets**.
+
+When we create a bucket, it is associated with a *specific AWS Region*, when we store data in the bucket, it is **redundantly stored across multiple AWS facilities**.
+
+Use this for [reference](https://aws.amazon.com/s3/).
+
+**Storage classes**:
+
+* **standard**, designed for high durability, availability and performance object storage for *frequently accessed data*
+
+* **intelligent-tiering**, designed to optimize costs by automatically moving data to the most cost-effective access tier, without performance impact or operational overhead; requires a small *monthly monitoring and automation fee per object*
+
+* **standard-infrequent access** (Standard-AI), is used for data that is accessed less frequently, but requires rapid access when needed.
+
+* **one zone-infrequent access** (One Zone-AI), same as standard-AI but only for 1 Availability zone
+
+* **glacier**, it is a low cost solution, with 3 different retrieval options that range from a few minutes to hours
+
+* **glacier deep archive**, low cost solution, allows long-term retention and digital preservation of data for data that can be accessed one or twice in a year
+
+Use this for [reference](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html).
+
+#### URL styles
+
+When we upload our data, we *create* a bucket in an AWS Region and we can load *objects* to the bucket.
+
+* *Bucket path-style endpoint*
+  
+  `https://s3.ap-northeast-1.amazonaws.com/bucket-name`
+  
+  With Region code and after the Bucket name
+
+* *Bucket virtual hosted-style endpoint*
+  
+  `https://bucket-name.s3-ap-northeast-1.amazonaws.com`
+  
+  With Bucket name and after Region code
+
+----
+
+## Elastic File System (EFS)
+
+It is a simple, scalable, elastic file system for use with AWS services and On-Premises resources. It is designed to automatically grow and shrink.
+
+Works well for big data and analytics, media processing workflows, content management, web serving and home directories.
+
+#### Resources
+
+In the EFS, a file system is the primary resource, each file system has:
+
+* **ID**
+
+* **Creation token**
+
+* **Creation time**
+
+* **File system size** in bytes
+
+* Number of <u>**mount targets**</u> that are created for the file system
+  
+  Mount targets are required to access the file system, we must associate mount target in the VPC, is composed by:
+  
+  * mount target ID
+  
+  * subnet ID for the subnet where it was created
+  
+  * file system ID for the file system where it was created
+  
+  * IP address where the file system can be mounted
+  
+  * mount target state
+
+* **File system state**
+
+* **Tags**
+  
+  Useful to organize your file system, you can assign your own *metadata* to each of the file systems that you create [*KEY-VALUE* pair]
+
+---
+
+## S3 Glacier
+
+Is a *data archiving service* that is designed for security, durability andd extremely low cost. That stored inside glaciers can take <u>several hours to be retrieved</u>.
+
+Every glacier is composed by:
+
+* **Archive**, any object that you store in S3 Glacier, it is the *base unit* of storage with an ID and a description
+
+* **Vault**, container for storing archives, has a name and the Region where you want locate the vault
+
+* **Vault access policy**, determine who *can* and *cannot* *access* data that is stored in the vault, and what *operation can* or *cannot* do
+
+
+
+-------------
+
+### Lifecycle policies
+
+Enable you to delete or <u>move objects based on age</u>.
+
+<img src="./pictures/S3_lifecycle.png" title="" alt="S3 lifecycle" data-align="center">
+
+Use this for [reference](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html).
