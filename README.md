@@ -625,6 +625,7 @@ Is composed by: **template for the root volume** of the instance (OS), **launch 
 
 * **AWS Marketplace**, pre-configured templates from third parties
 
+<<<<<<< HEAD
 <img src="./pictures/EC2_types.png" title="" alt="EC2 types" data-align="center">
 
 More info about different [types](https://aws.amazon.com/ec2/instance-types/)
@@ -809,3 +810,6 @@ Every Lambda function has a **name**, **runtime environment** (for example pytho
 ---------
 
 ## Elastic Beanstalk
+=======
+![EC2 types](./pictures/EC2_types.png)
+>>>>>>> 0a4c8fdafafde9f33abc497390f8dce1c12563dc
