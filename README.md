@@ -4,6 +4,8 @@ Cloud computing is the on-demand delivery of IT resources via the internet with 
 
 Almost anything you can implement with traditional IT can be implemented as an AWS cloud computing service.
 
+## 
+
 ## Cloud service models
 
 * IaaS **"Infrastructure as a service"** \
@@ -12,6 +14,8 @@ Almost anything you can implement with traditional IT can be implemented as an A
     no need to manage the underlying infrastructure Hw or Sw
 * SaaS **"Software as a service"** \
     products that we can use (end-user applications)
+
+## 
 
 ## Cloud computing deployment models
 
@@ -40,12 +44,16 @@ Almost anything you can implement with traditional IT can be implemented as an A
 
 **AWS** is a "secure cloud platform" that offers a broad set of global cloud-based products, offers <u>flexibility</u>, provides <u>on-demand access to many IT resources</u> and <u>management tools</u>.
 
+### 
+
 ### Simple example of a database application
 
 Costumers send data to Amazon EC2 instances. \
 EC2 servers batch the data and add an object per costumer to Amazon S3.  \
 To build an index we can use a simple non-relational database like Amazon DynamoDB. \
 We can run these services inside an Amazon Virtual Private Cloud (VPC).
+
+### 
 
 ### Services
 
@@ -84,6 +92,8 @@ We can run these services inside an Amazon Virtual Private Cloud (VPC).
 ## AWS Cloud Adoption Framework
 
 **AWS CAF** provides guidance and best practices to help organizations build a cloud computing architecture across the organization and throughout the IT lifecycle.
+
+### 
 
 ### Perspectives
 
@@ -159,6 +169,8 @@ The difference between these two is how they are deployed.
   * **difficult to scale**
 * *Cloud* infrastructure is purchased from a service provide, so there are <u>no capital expenses</u>  and there are costs only for new tools or upgrade (scaling).
 
+#### 
+
 #### Total cost of Ownership (TCO)
 
 Is the financial estimate to help identify *direct* and *indirect* costs of a system.
@@ -166,6 +178,8 @@ Is the financial estimate to help identify *direct* and *indirect* costs of a sy
 It's useful to **compare** the costs of running an entire infrastructure environment or specific workload on AWS or using an On-Premises solution.
 
 Can be a good indicator to **budget** and build the business case for moving to the cloud.
+
+##### 
 
 ##### Parameters:
 
@@ -185,9 +199,13 @@ Helps you to estimate a <u>monthly</u> AWS bill, identify opportunity for cost r
 
 https://calculator.aws/#/
 
+#### 
+
 #### Cloud total cost of Ownership (CTCO)
 
 Defines what will be spent on the technology after adoption, or what it costs to run the solution. Different from TCO, because Total cost of Ownership is used for On-Premises solutions.
+
+##### 
 
 ##### Parameters:
 
@@ -201,9 +219,13 @@ Defines what will be spent on the technology after adoption, or what it costs to
 
 Is a free account management service that enables you to consolidate multiple AWS accounts into an **organization** that you create and manage.
 
+#### 
+
 #### Teminology
 
 * **Organization units** (OU), are containers for accounts that can contain other OUs. We can define different <u>policies</u> for OUs or Accounts, each policy will affect all the children.
+
+#### 
 
 #### Organization utilities
 
@@ -226,6 +248,8 @@ You can see more about "Setup an organization" and "IAM simulator" [here](https:
 AWS Cloud infrastructure is built around **Regions**, there are 22 regions worldwide. An AWS Region is a physical geographical location with one or more *Availability zone* (data centers).
 
 A business can replicate data across Regions, this decision is based on data governance and legal requirements. It is important to consider the **latency**, you can use [this](https://www.cloudping.info/).
+
+## 
 
 ## AWS foundational services
 
@@ -311,11 +335,15 @@ For best practices for running a *Oracle Database* see [this](https://docs.aws.a
 
 In short we can say that AWS is responsible for security **of** the cloud, instead the user is responsible for the security **in** the cloud.
 
+## 
+
 ## AWS Identity and Access management (IAM)
 
 Allows you to control access to compute, storage, database, and application services in the AWS Cloud. IAM can be used to *handle authentication*, and to specify or enforce *authorization policies*, in order to specify which user can access which service.
 
 **Best practice:** <u>follow the principle of least privilege</u>
+
+#### 
 
 #### Fine-grained access rights
 
@@ -324,6 +352,8 @@ Allows you to control access to compute, storage, database, and application serv
 - **which** resource can be accessed and what can the user do whit it
 
 - **how** resources can be accessed
+
+#### 
 
 #### Components
 
@@ -335,6 +365,8 @@ Allows you to control access to compute, storage, database, and application serv
 
 * **role**, mechanism to grant a set of permissions
 
+#### 
+
 #### Authenticate as a IAM user to gain access
 
 When we define an IAM user, we define also the *types of access*.
@@ -343,6 +375,8 @@ A user can access using **Programmatic access** (API) using <u>access key ID</u>
 
 We can also add **IAM MFA** to increase the security.
 
+#### 
+
 #### Policies
 
 * **Identity-based**, attach a policy to any IAM entity (user/group/role), listing all the actions an entity can or cannot perform; a single policy can be attached to multiple entities and every entity can have multiple policies.
@@ -350,6 +384,8 @@ We can also add **IAM MFA** to increase the security.
 * **Resource-based**, attached to a resource, for example S3 bucket.
 
 You can access the IAM Policy simulator [here](https://policysim.aws.amazon.com/).
+
+#### 
 
 #### Securing a new AWS account
 
@@ -373,6 +409,8 @@ A computer network is composed by two or more clients machines that are connecte
 
 Each machine in a network has a unique IP address, that can be *32-bit* long **IPv4** of *128-bit* long **IPv6**
 
+#### 
+
 #### Classless Inter-Domain routing (CIDR)
 
 A CIDR address is composed by:
@@ -388,6 +426,8 @@ Is a way to express a group of IP addresses that are consecutive to each other. 
 * *Fixed IP addresses*, for example `192.0.2.0/32` represents a single IP address, this can be useful when you want to set up a firewall rule
 
 * *The internet*, in which every byte is flexible `0.0.0.0/0`
+
+#### 
 
 #### Open System interconnection model (OSI)
 
@@ -415,13 +455,19 @@ Lets you provision a logically isolated section of the AWS Cloud where you can l
 
 * Configuration of *route tables* and *network gateways*
 
+#### 
+
 #### VPCs
 
 Every VPC is *logically isolated* from other VPCs, it is dedicated to your AWS account and belongs to a single AWS Region and can span across multiple Availability Zones
 
+
+
 #### Subnets
 
 *Range of IP addresses* that divide a VPC, belong to a single Availability Zone and can be *public* or *private*
+
+
 
 #### IP addressing
 
@@ -451,11 +497,15 @@ Use this [reference](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-am
   
   Can be *manually assigned* through an Elastic IP address or *automatically* assigned through the auto-assign public IP address settings at the subnet level.
 
+### 
+
 ### Elastic network interface
 
 Is a *virtual network interface* that you can **attach** to an instance to redirect network traffic to it and **detach** it. Each instance in your VPC has a default network interface that is assigned a private IPv4 address from the IPv4 address range of your VPC.
 
 Use this [reference](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html).
+
+
 
 #### Route tables and routes
 
@@ -470,6 +520,8 @@ Use this [reference](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_
 Is a scalable, redundant and highly available VPC components that allows communication between instances in your VPC and the internet. Allows to **provide a target** in yout VPC route table for internet-routable traffic and to perform **network address translation** for instances that were assigned IPv4 addresses.
 
 Use this [reference](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html).
+
+
 
 ### Network address translation (NAT) gateway
 
@@ -490,6 +542,8 @@ Pros:
 * Separation of duties
 
 * Security groups
+
+## 
 
 ## VPC peering
 
@@ -513,11 +567,15 @@ By default, <u>instances that you launch into a VPC cannot communicate with remo
 
 To connect your VPC to your remote network we need to create a [VPN connection](https://docs.aws.amazon.com/vpc/latest/userguide/vpn-connections.html).
 
+
+
 ### AWS Direct connect
 
 AWS offers this service to establish a dedicated, private network connection between your network and one of the [AWS Direct connect](https://aws.amazon.com/directconnect/) locations, so that we can reduce network costs, increase bandwidth throughput and provide a more consistent network experience than internet-based connections. 
 
 This can be useful if your data center is located far away from your AWS Region.
+
+
 
 ### AWS Transit Gateway
 
@@ -535,6 +593,8 @@ Is a *virtual device* that enables you to privately connect your VPC to supporte
 
 * **gateway endpoint**
 
+## 
+
 ## VPC security
 
 ### Security group
@@ -543,7 +603,9 @@ Acts as a *virtual firewall* for your instance, and it controls **inbound** and 
 
 Every security group has its *rules*, default groups **deny all <u>inbound</u> traffic** and **allow all outbound traffic**.
 
-[stateful]
+[<u>stateful</u>]
+
+
 
 ### Network access control lists (network ACLs)
 
@@ -551,7 +613,7 @@ Every VPC can have this additional layer of security, are rules that are similar
 
 By default **inbound and outbound traffic is allowed**
 
-[stateless]
+[<u>stateless</u>]
 
 Use this for [reference](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html).
 
@@ -576,6 +638,8 @@ Supported routing:
 * **Failover** routing, fail over to a backup site if your primary site becomes unreachable
 
 * **Multivalue answer** routing, respond to DNS queries with up to 8 healthy records selected at random
+
+## 
 
 ## Amazon CloudFront
 
@@ -609,11 +673,15 @@ Is a **Content delivery network CDN** service, is a globally distributed system 
 
 Provides virtual machines where you can host the same kinds of applications that you might run on a traditional On-Premises server. **Elastic compute cloud** dives you full control over the *guest OS (Win/Linux)* on each instance, every instance can have a specified size into an Availability Zone. You can launch instances from **AMIs** and you can also control traffic *to* and *from* instances.
 
+
+
 ### Amazon machine image (AMI)
 
 Provides information that is required to launch an EC2 instance, every instance need an AMI, you can use different AMIs for different types of instances.
 
 Is composed by: **template for the root volume** of the instance (OS), **launch permissions** to control which AWS account can use the AMI and **block device mapping** that specifies the volume to attach to the instance.
+
+
 
 **Types:**
 
@@ -647,6 +715,8 @@ Every time we stop or terminate an instance a new IP address we be associated/us
 
 In order to make secure API calls to other AWS services you need to attach an *AWS Identity* and *IAM role* to the EC2 instance.
 
+
+
 #### User data scripts [optional]
 
 We can specify a *user data script* at instance launch, so that we customize the runtime environment of the instance. Ususally are Linux bash shell scripts or command for the Command Prompt window/Windows PowerShell.
@@ -667,6 +737,8 @@ For each volume we must specify:
 - Auto-deletion on terminate
 
 - Encryption used 
+
+#### 
 
 #### Storage options
 
@@ -756,9 +828,13 @@ Use this for [reference](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/usi
 
 Containers are a method of *operating system virtualization*, it is repeatable, self-contained environment, software runs the same in different environments and it is faster to launch, stop or terminate than a VM. Containers are created from *"templates"* called image.
 
+
+
 #### What is Docker?
 
 Is a software platform that enables you to build, test, and deploy applications quickly; we can run containers in Docker.
+
+
 
 ### Elastic Container Service (ECS)
 
@@ -768,6 +844,8 @@ To use ECS we need to create a  **task definition** that is a text file that des
 
 A **task** is the instantiation of a task definition within a cluster, every cluster can run more tasks. **ECS task scheduler** places tasks within the cluster, every **ECS cluster** consists of a group of EC2 instances each of which is running a **ECS container agent**.
 
+
+
 #### Cluster options
 
 When we create an ECS Cluster we can choose to create:
@@ -775,6 +853,8 @@ When we create an ECS Cluster we can choose to create:
 * **Networking Only** cluster, powered by AWS Fargate, the cluster will be managed by  AWS, in this way we only need to package the application in containers, specify the CPU and memory requirements , define networking and IAM policies and launch the application.
 
 * **EC2 Linux/Windows + networking cluster**, we must choose to run as an *On-Demand instances* or *Spot instances*, we need to specify many details about the EC2 instances.
+
+### 
 
 ### Elastic Container registry (ECR)
 
@@ -786,6 +866,8 @@ Is a fully managed Docker container registry that makes it easy for developers t
 
 It's an open source software for *container orchestration*, enables to deploy and manage containerized applications at scale. We can run any type of containerized application using the same toolset in both On-Premises data centers and the cloud. Containers are run in logical groupings called **pods**, each pod has an IP address and a single Domain Name System (DNS), which Kubernetes uses to connect to services with each other and external traffic.
 
+
+
 ### Elastic Kubernetes Service (EKS)
 
 Is a managed Kubernetes service that makes it easy to run Kubernetes on AWS without need to install, operate and maintain your ow Kubernetes control pane. Supports Linux/Windows containers, supports many add-ons. 
@@ -796,11 +878,15 @@ Is a managed Kubernetes service that makes it easy to run Kubernetes on AWS with
 
 Supports many programming languages, has a completely automated administration, has an high built-in fault tolerance, supports orchestration of multiple functions and has a *pay-per-use* pricing.
 
+
+
 #### Event source
 
 Produces events that trigger an AWS Lambda function to run. Lambda can also **pull** records from an Amazon Simple queue service (SQS) queue and run a Lambda for each fetched message; Lambda can also read events from Dynamo DB.
 
 Use this for [reference](https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html).
+
+
 
 #### Function configuration
 
@@ -813,6 +899,8 @@ Every Lambda function has a **name**, **runtime environment** (for example pytho
 It's a PaaS that falicitates the quick *deployment*, *scaling* and *management* of your web applications and services. You only need to upload your code, choose the instance type, the database to use, set and adjust automatic scaling, update your application, access the server log files and enable HTTPS on the load balancer.
 
 You pay only for the underlying resources that are used.
+
+
 
 #### Deployments
 
@@ -846,6 +934,8 @@ When we create a bucket, it is associated with a *specific AWS Region*, when we 
 
 Use this for [reference](https://aws.amazon.com/s3/).
 
+
+
 **Storage classes**:
 
 * **standard**, designed for high durability, availability and performance object storage for *frequently accessed data*
@@ -861,6 +951,8 @@ Use this for [reference](https://aws.amazon.com/s3/).
 * **glacier deep archive**, low cost solution, allows long-term retention and digital preservation of data for data that can be accessed one or twice in a year
 
 Use this for [reference](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html).
+
+
 
 #### URL styles
 
@@ -885,6 +977,8 @@ When we upload our data, we *create* a bucket in an AWS Region and we can load *
 It is a simple, scalable, elastic file system for use with AWS services and On-Premises resources. It is designed to automatically grow and shrink.
 
 Works well for big data and analytics, media processing workflows, content management, web serving and home directories.
+
+
 
 #### Resources
 
@@ -943,3 +1037,125 @@ Enable you to delete or <u>move objects based on age</u>.
 <img src="./pictures/S3_lifecycle.png" title="" alt="S3 lifecycle" data-align="center">
 
 Use this for [reference](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html).
+
+---
+
+----
+
+# Module 8
+
+## Unmanaged services
+
+Are typically provisioned in discrete portions as specified by the user, <u>you must manage how the service responds to changes in load, errors and situations where resources become unavailable</u>.
+
+The benefit to using an unmanaged service is that you have more fine-tuned control over how your solution handles changes in load, errors and situations where resources become unavailable.
+
+
+
+## Managed services
+
+Require the user to configure them, require less configuration than *Unmanaged services*. Have good features such as scaling, fault-tolerance and availability, <u>handled automatically and internally by AWS</u>.
+
+---
+
+## Relational Database service (RDS)
+
+Is a **managed** service that sets up and operates a relational database in the cloud. You only manage the application optimization, instead AWS manages installing and patching the OS, the database software, automatic backups and availability.
+
+AWS also scales resources, manages power and servers, and performs maintenance.
+
+
+
+### Database instance
+
+Is an isolated database environment that can contain *multiple user-create databases*. The resources in a database instance are determined by its database instance class, and the type of storage is dictated by the type of disks.
+
+
+
+### RDS in a virtual private cloud (VPC)
+
+Usually the database is isolated in a *private subnet* and is only made directly accessible to indicated application instances. Keep in mind that when you select the subnet, you are also choosing the *Availability Zone* for your database instance.
+
+
+
+#### Multi-AZ deployment
+
+Can be configured to **automatically generate a standby copy** of the database instance in another *Availability Zone* within the same VPC. Transaction are synchronously replicated to the standby copy. Therefore, if the main database instance fails, *Amazon RDS* automatically brings the standby copy online.
+
+
+
+### Read replicas
+
+*RDS* supports the creation of read replicas for *MySQL*, *MariaDB*, *PostgreSQL* and *Amazon Aurora*. <u>Updates that are made to the source database instance are asynchronously copied to the read replica instance</u>. In this way you can **reduce the load** on your source database. Read replicas can be created in a different Region than the primary database.
+
+<img src="./pictures/RDS_do_dont.png" title="" alt="When to use RDS" data-align="center">
+
+---
+
+## Relational databases
+
+**RDB** works with structured data that is organized by tables, records, and columns. There are well-defined relationship between database tables. **SQL** (Structured query language). Relational databases <u>might</u> have difficulties scaling out horizontally or working with semistructured data, and <u>might</u> also require many joins for normalized data.
+
+
+
+## Non-Relational databases
+
+Is any database that does not follow the relational model. They can scale out horizontally, and they can work with unstructured and semistructured data.
+
+---
+
+## DynamoDB
+
+Is a fast and flexible **NoSLQ** database for all applications that need consistent, single-digit-millisecond latency at any scale. Amazon manages all the underlying data infrastructure for this service and redundantly stores data across multiple facilities in a native *US Region* as part of the fault-tolerant architecture. Items in the same table can have different attributes. Can have global tables that enable you to <u>automatically replicate across AWS Regions, encryption at rest and item TTL</u>.
+
+
+
+#### Components
+
+A DynamoDB have **tables** that are collections of data, **items** group of attributes that is uniquely identifiable and **attributes**. 
+
+**Primary keys**:
+
+* **partition key**, composed by a single attribute called *sort key*
+
+* **composite primary key**, composed by more attributes 
+
+Use this for [reference](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html#HowItWorks.CoreComponents.TablesItemsAttributes).
+
+
+
+#### Partitioning
+
+As data grows, table data is partitioned and indexed by the primary key. You can retrive data from DynamoDB table in 2 different ways:
+
+* *query operation* takes advantage of partitioning to effectively locate items by using the primary key
+
+* *scan*, which enables you to locate items in the table by matching conditions on non-key attributes
+
+----
+
+## Redshift
+
+Is a fully managed **data werehouse** that makes it simple and cost-effective **to analyze** all your data by using standard *SQL* and your existing business intelligence tools.
+
+Allows to run complex analytic queries against <u>petabytes</u> of structured data.
+
+
+
+### Parallel processing architecture
+
+The leader node manages communications with client programs and all communication with compute nodes. It parses and develops plans to carry database operations for all the steps required to obtain results for complex queries. <u>The compute nodes run the compiled code send intermediate results back to the leader node for final aggregation</u>.
+
+---
+
+## Aurora
+
+Is a *MySQL* and *PostgreSQL* **compatible relational database** that is built for the cloud. As a fully managed service, Aurora is designed to automate time-consuming tasks like provisioning, patching, backup, recovery, failure detection an repair.
+
+<img src="./pictures/Aurora_pros.png" title="" alt="Aurora benefits" data-align="center">
+
+-------
+
+--------
+
+# Module 9
