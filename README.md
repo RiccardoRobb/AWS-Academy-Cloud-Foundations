@@ -809,3 +809,17 @@ Every Lambda function has a **name**, **runtime environment** (for example pytho
 ---------
 
 ## Elastic Beanstalk
+
+It's a PaaS that falicitates the quick *deployment*, *scaling* and *management* of your web applications and services. You only need to upload your code, choose the instance type, the database to use, set and adjust automatic scaling, update your application, access the server log files and enable HTTPS on the load balancer.
+
+You pay only for the underlying resources that are used.
+
+#### Deployments
+
+Supports web applications written in *Java*, *.NET*, *PHP*, *Node.js*, *Phyton*, *Ruby*, *Go* and *Docker*, it deploys on servers such as Apche, NGINX, Passenger, Puma and Microsoft Internet Information Services.
+
+--------
+
+--------
+
+# Modeule 7
