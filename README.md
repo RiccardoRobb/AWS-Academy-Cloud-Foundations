@@ -6,11 +6,11 @@ Almost anything you can implement with traditional IT can be implemented as an A
 
 ## Cloud service models
 
-* <mark>IaaS</mark> **"Infrastructure as a service"** \
+* IaaS **"Infrastructure as a service"** \
     networking features, Hw or VMs and data storage space
-* <mark>PaaS</mark> **"Platform as a service"** \
+* PaaS **"Platform as a service"** \
     no need to manage the underlying infrastructure Hw or Sw
-* <mark>SaaS</mark> **"Software as a service"** \
+* SaaS **"Software as a service"** \
     products that we can use (end-user applications)
 
 ## Cloud computing deployment models
@@ -159,7 +159,7 @@ The difference between these two is how they are deployed.
   * **difficult to scale**
 * *Cloud* infrastructure is purchased from a service provide, so there are <u>no capital expenses</u>  and there are costs only for new tools or upgrade (scaling).
 
-#### Total cost of Ownership (<mark>TCO</mark>)
+#### Total cost of Ownership (TCO)
 
 Is the financial estimate to help identify *direct* and *indirect* costs of a system.
 
@@ -185,7 +185,7 @@ Helps you to estimate a <u>monthly</u> AWS bill, identify opportunity for cost r
 
 https://calculator.aws/#/
 
-#### Cloud total cost of Ownership (<mark>CTCO</mark>)
+#### Cloud total cost of Ownership (CTCO)
 
 Defines what will be spent on the technology after adoption, or what it costs to run the solution. Different from TCO, because Total cost of Ownership is used for On-Premises solutions.
 
@@ -229,7 +229,7 @@ A business can replicate data across Regions, this decision is based on data gov
 
 ## AWS foundational services
 
-* <mark>**compute**</mark>
+* **compute**
   
   - **EC2**, acts as virtual machines in the cloud.
   
@@ -247,7 +247,7 @@ A business can replicate data across Regions, this decision is based on data gov
   
   - **Fargate**, allows to run containers (ECS) without having to manage servers or clusters.
 
-* <mark>**networking**</mark>
+* **networking**
   
   * **VPC**, enables you to provision logically isolated sections of the AWS Cloud.
   
@@ -263,7 +263,7 @@ A business can replicate data across Regions, this decision is based on data gov
   
   * **VPN** from your network or device to the AWS global network. 
 
-* **<mark>security, identity and compliance</mark>**
+* **security, identity and compliance**
   
   * **IAM**, manages access to AWS services and resources securely, allows to *create and manage AWS users and groups*.
   
@@ -277,7 +277,7 @@ A business can replicate data across Regions, this decision is based on data gov
   
   * **Shield**, is a managed *DDoS protection* for applications on AWS.
 
-* <mark>**storage**</mark>
+* **storage**
   
   - **S3**, used for any amount of data, usually for websites, mobile apps, backup and restore, archive, enterprise applications, IoT and big data analytics
   
@@ -287,7 +287,7 @@ A business can replicate data across Regions, this decision is based on data gov
   
   - **Simple storage service Glacier**, for archiving *long-term backups*.
 
-* <mark>**database**</mark>
+* **database**
   
   * **RDS**, allows to create, operate and scale *relational databases*.
   
@@ -311,7 +311,7 @@ For best practices for running a *Oracle Database* see [this](https://docs.aws.a
 
 In short we can say that AWS is responsible for security **of** the cloud, instead the user is responsible for the security **in** the cloud.
 
-## AWS Identity and Access management (<mark>IAM</mark>)
+## AWS Identity and Access management (IAM)
 
 Allows you to control access to compute, storage, database, and application services in the AWS Cloud. IAM can be used to *handle authentication*, and to specify or enforce *authorization policies*, in order to specify which user can access which service.
 
@@ -405,7 +405,7 @@ Is a conceptual model used to explain <u>how data travels</u> over a network.
 
 -------------------
 
-## Amazon Virtual private cloud (<mark>VPC</mark>)
+## Amazon Virtual private cloud (VPC)
 
 Lets you provision a logically isolated section of the AWS Cloud where you can launch your AWS resources. 
 
@@ -613,7 +613,7 @@ Provides virtual machines where you can host the same kinds of applications that
 
 Provides information that is required to launch an EC2 instance, every instance need an AMI, you can use different AMIs for different types of instances.
 
-Is composed by: **templte for the root volume** of the instance (OS), **launch permissions** to control which AWS account can use the AMI and **block device mapping** that specifies the volume to attach to the instance.
+Is composed by: **template for the root volume** of the instance (OS), **launch permissions** to control which AWS account can use the AMI and **block device mapping** that specifies the volume to attach to the instance.
 
 **Types:**
 
@@ -629,4 +629,183 @@ Is composed by: **templte for the root volume** of the instance (OS), **launch p
 
 More info about different [types](https://aws.amazon.com/ec2/instance-types/)
 
-    
+When you have more EC2 instances, you can use **placements groups** to specify a placement criteria, for example "*deploy all the instances in the same Availability Zone*".
+
+-----
+
+#### Network settings
+
+You have to choose where you want to deploy the instance, selecting the *Region* of interest; Every time you launch an instance it will have a *default <u>VPC</u>*, AWS will assign a public IP address. You can also choose to launch the instance into a **nondefault VPC**.
+
+**Elastic IP address**
+
+Every time we stop or terminate an instance a new IP address we be associated/used by the instance. If we want to have the same IP address we must associate an *Elastic IP address*.
+
+-----
+
+#### Attach IAM role [optional]
+
+In order to make secure API calls to other AWS services you need to attach an *AWS Identity* and *IAM role* to the EC2 instance.
+
+#### User data scripts [optional]
+
+We can specify a *user data script* at instance launch, so that we customize the runtime environment of the instance. Ususally are Linux bash shell scripts or command for the Command Prompt window/Windows PowerShell.
+
+[This](https://aws.amazon.com/premiumsupport/knowledge-center/execute-user-data-ec2/) is an example.
+
+----
+
+#### Specify storage
+
+We can configure storage options, we can choose a **root volume** where the guest OS is installed, we can also attach additional storage volumes.
+For each volume we must specify:
+
+- Size of the disk in GB
+
+- Volume type (type of SSDs or HDDs)
+
+- Auto-deletion on terminate
+
+- Encryption used 
+
+#### Storage options
+
+* **Elastic Block Store (EBS)**
+  
+  Is an high-performance durable block storage service that is designed for both *throughput* and *transactions-intensive* workload
+
+* **EC2 Instance Store**
+  
+  Ephemeral or temporary block-level storage for the instance. Are located to the physical disk used by the instance, used for *temp data* such as buffers, caches, scratch data and others
+
+* **Elastic File System (EFS)**
+  
+  Fully managed elastic *Network File System (NFS)*, built to scale on-demand to petabytes, it grows and shrinks automatically
+
+* **Simple Storage Service (S3)**
+  
+  Object storage service that offers scalability, data availability, security and performance; useful for websites, mobile apps, backup and restore, archive, enterprise applications, IoT and big data analytics
+
+---
+
+#### Tags
+
+Are label assigned to an AWS resource, *KEY* and optional *VALUE*, in this way we can attach <u>metadata</u> to an EC2 instance, to easy filter, automate, control cost allocation and select specific access control.
+
+---
+
+#### Security group settings
+
+Is a *set of firewall rules* that control traffic to  and from the instance, we can specify the *source* and which *port* that network communication can use.
+
+---
+
+#### Key pair (SSH connections)
+
+You can manage and create Key pair of **PublicKey** stored by AWS and **PrivateKey** file that you store (.pub). This enables secure connections to the instance.
+
+------
+
+### Amazon CloudWatch
+
+We can monitor EC2 instances, using *near-real-time* metrics and using the charts provided by the *Monitoring Tab*; up to 15 months of historical data.
+
+* **basic monitoring**
+  
+  no additional cost, updated every 5 minutes
+
+* **detailed monitoring**
+  
+  fixed monthly rate for 7 pre-selected metrics, every 1 minute
+
+Use this for [reference](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch-new.html).
+
+----
+
+### Pricing models
+
+* **On-Demand instances**
+  
+  Pay by the <u>hour</u>, no long-term commitments but eligible for [Free tier](https://aws.amazon.com/free/)
+
+* **Dedicated hosts**
+  
+  Physical server with EC2 instance capacity full dedicate to your use
+
+* **Dedicated instances**
+  
+  Instances that run in a VPC on hardware dedicated to a single costumer
+
+* **Reserved instance**
+  
+  You can reserve computing capability for *1-year or 3-year term with hourly running cost*
+
+* **Scheduled Reserved Instances**
+  
+  You can purchase capacity reservations that recur on a daily, weekly, or monthly basis whit a specified duration for a 1-year term
+
+* **Spot instances**
+  
+  Allows you to bid on unused EC2 instances, which can lower the costs; the *hourly price for a spot instance depends on supply and demand*
+
+---------
+
+## Container services
+
+#### What's a container?
+
+Containers are a method of *operating system virtualization*, it is repeatable, self-contained environment, software runs the same in different environments and it is faster to launch, stop or terminate than a VM. Containers are created from *"templates"* called image.
+
+#### What is Docker?
+
+Is a software platform that enables you to build, test, and deploy applications quickly; we can run containers in Docker.
+
+### Elastic Container Service (ECS)
+
+It's an highly scalable, fast, container management service. Can *orchestrate* the running Docker containers, maintain and scale the fleet of nodes that run your containers and removes the complexity of standing up the infrastructure.
+
+To use ECS we need to create a  **task definition** that is a text file that describes one or more containers, up to a  maximum of 10, specifies also the parameters for your application.
+
+A **task** is the instantiation of a task definition within a cluster, every cluster can run more tasks. **ECS task scheduler** places tasks within the cluster, every **ECS cluster** consists of a group of EC2 instances each of which is running a **ECS container agent**.
+
+#### Cluster options
+
+When we create an ECS Cluster we can choose to create:
+
+* **Networking Only** cluster, powered by AWS Fargate, the cluster will be managed by  AWS, in this way we only need to package the application in containers, specify the CPU and memory requirements , define networking and IAM policies and launch the application.
+
+* **EC2 Linux/Windows + networking cluster**, we must choose to run as an *On-Demand instances* or *Spot instances*, we need to specify many details about the EC2 instances.
+
+### Elastic Container registry (ECR)
+
+Is a fully managed Docker container registry that makes it easy for developers to store, manage and deploy Docker container images.
+
+------
+
+#### What is Kubernetes?
+
+It's an open source software for *container orchestration*, enables to deploy and manage containerized applications at scale. We can run any type of containerized application using the same toolset in both On-Premises data centers and the cloud. Containers are run in logical groupings called **pods**, each pod has an IP address and a single Domain Name System (DNS), which Kubernetes uses to connect to services with each other and external traffic.
+
+### Elastic Kubernetes Service (EKS)
+
+Is a managed Kubernetes service that makes it easy to run Kubernetes on AWS without need to install, operate and maintain your ow Kubernetes control pane. Supports Linux/Windows containers, supports many add-ons. 
+
+-----------
+
+## AWS Lambda
+
+Supports many programming languages, has a completely automated administration, has an high built-in fault tolerance, supports orchestration of multiple functions and has a *pay-per-use* pricing.
+
+#### Event source
+
+Produces events that trigger an AWS Lambda function to run. Lambda can also **pull** records from an Amazon Simple queue service (SQS) queue and run a Lambda for each fetched message; Lambda can also read events from Dynamo DB.
+
+Use this for [reference](https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html).
+
+#### Function configuration
+
+Every Lambda function has a **name**, **runtime environment** (for example python/node) and an **execution role** to grant IAM permissions so that we can interact with other AWS services. After the initial configuration we must add a code to be executed, a trigger, the memory required and if necessary we can also setup environment variables.
+
+---------
+
+## Elastic Beanstalk
