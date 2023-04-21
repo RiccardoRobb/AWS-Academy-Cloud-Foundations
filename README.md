@@ -1211,3 +1211,21 @@ Use this for [reference](https://docs.aws.amazon.com/awssupport/latest/user/trus
 ---
 
 # Module 10
+
+## Elastic Load Balancing
+
+Is an AWs service that **distributes incoming application or network traffic** across multiple targets in a *<u>single</u> Availability Zone* or *across <u>multiple</u> Availability Zone*.
+
+Scales your load balancer as traffic to your application changes over time
+
+Types:
+
+<img src="./pictures/LB_types.png" title="" alt="Load balancing types" data-align="center">
+
+Use this for [reference](https://aws.amazon.com/elasticloadbalancing/features/?nc=sn&loc=2).
+
+\
+
+To use a load balancer you need to register **targets in target groups**. Load balancer *performs health checks* to monitor health of registred targets.
+
+You also need to specify one or more **listeners**, every listener is a process that checks for connection requests. It is configured with a <u>protocol and port number</u> for connections from load balancer to the targets
