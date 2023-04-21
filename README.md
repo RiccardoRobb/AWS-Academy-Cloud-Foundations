@@ -1224,7 +1224,9 @@ Types:
 
 Use this for [reference](https://aws.amazon.com/elasticloadbalancing/features/?nc=sn&loc=2).
 
-\
+
+
+
 
 To use a load balancer you need to register **targets in target groups**. Load balancer *performs health checks* to monitor health of registred targets.
 
