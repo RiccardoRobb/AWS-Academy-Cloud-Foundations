@@ -461,13 +461,9 @@ Lets you provision a logically isolated section of the AWS Cloud where you can l
 
 Every VPC is *logically isolated* from other VPCs, it is dedicated to your AWS account and belongs to a single AWS Region and can span across multiple Availability Zones
 
-
-
 #### Subnets
 
 *Range of IP addresses* that divide a VPC, belong to a single Availability Zone and can be *public* or *private*
-
-
 
 #### IP addressing
 
@@ -505,8 +501,6 @@ Is a *virtual network interface* that you can **attach** to an instance to redir
 
 Use this [reference](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html).
 
-
-
 #### Route tables and routes
 
 A route table contains a set of rules/routes that you can configure to direct network traffic from your subnet. Each rout specifies a destination and a target, by default every route table contains a *local route* for communication within the VPC. Each subnet must be associated with a route table (at most one).
@@ -520,8 +514,6 @@ Use this [reference](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_
 Is a scalable, redundant and highly available VPC components that allows communication between instances in your VPC and the internet. Allows to **provide a target** in yout VPC route table for internet-routable traffic and to perform **network address translation** for instances that were assigned IPv4 addresses.
 
 Use this [reference](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html).
-
-
 
 ### Network address translation (NAT) gateway
 
@@ -567,15 +559,11 @@ By default, <u>instances that you launch into a VPC cannot communicate with remo
 
 To connect your VPC to your remote network we need to create a [VPN connection](https://docs.aws.amazon.com/vpc/latest/userguide/vpn-connections.html).
 
-
-
 ### AWS Direct connect
 
 AWS offers this service to establish a dedicated, private network connection between your network and one of the [AWS Direct connect](https://aws.amazon.com/directconnect/) locations, so that we can reduce network costs, increase bandwidth throughput and provide a more consistent network experience than internet-based connections. 
 
 This can be useful if your data center is located far away from your AWS Region.
-
-
 
 ### AWS Transit Gateway
 
@@ -604,8 +592,6 @@ Acts as a *virtual firewall* for your instance, and it controls **inbound** and 
 Every security group has its *rules*, default groups **deny all <u>inbound</u> traffic** and **allow all outbound traffic**.
 
 [<u>stateful</u>]
-
-
 
 ### Network access control lists (network ACLs)
 
@@ -673,15 +659,11 @@ Is a **Content delivery network CDN** service, is a globally distributed system 
 
 Provides virtual machines where you can host the same kinds of applications that you might run on a traditional On-Premises server. **Elastic compute cloud** dives you full control over the *guest OS (Win/Linux)* on each instance, every instance can have a specified size into an Availability Zone. You can launch instances from **AMIs** and you can also control traffic *to* and *from* instances.
 
-
-
 ### Amazon machine image (AMI)
 
 Provides information that is required to launch an EC2 instance, every instance need an AMI, you can use different AMIs for different types of instances.
 
 Is composed by: **template for the root volume** of the instance (OS), **launch permissions** to control which AWS account can use the AMI and **block device mapping** that specifies the volume to attach to the instance.
-
-
 
 **Types:**
 
@@ -714,8 +696,6 @@ Every time we stop or terminate an instance a new IP address we be associated/us
 #### Attach IAM role [optional]
 
 In order to make secure API calls to other AWS services you need to attach an *AWS Identity* and *IAM role* to the EC2 instance.
-
-
 
 #### User data scripts [optional]
 
@@ -828,13 +808,9 @@ Use this for [reference](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/usi
 
 Containers are a method of *operating system virtualization*, it is repeatable, self-contained environment, software runs the same in different environments and it is faster to launch, stop or terminate than a VM. Containers are created from *"templates"* called image.
 
-
-
 #### What is Docker?
 
 Is a software platform that enables you to build, test, and deploy applications quickly; we can run containers in Docker.
-
-
 
 ### Elastic Container Service (ECS)
 
@@ -843,8 +819,6 @@ It's an highly scalable, fast, container management service. Can *orchestrate* t
 To use ECS we need to create a  **task definition** that is a text file that describes one or more containers, up to a  maximum of 10, specifies also the parameters for your application.
 
 A **task** is the instantiation of a task definition within a cluster, every cluster can run more tasks. **ECS task scheduler** places tasks within the cluster, every **ECS cluster** consists of a group of EC2 instances each of which is running a **ECS container agent**.
-
-
 
 #### Cluster options
 
@@ -866,8 +840,6 @@ Is a fully managed Docker container registry that makes it easy for developers t
 
 It's an open source software for *container orchestration*, enables to deploy and manage containerized applications at scale. We can run any type of containerized application using the same toolset in both On-Premises data centers and the cloud. Containers are run in logical groupings called **pods**, each pod has an IP address and a single Domain Name System (DNS), which Kubernetes uses to connect to services with each other and external traffic.
 
-
-
 ### Elastic Kubernetes Service (EKS)
 
 Is a managed Kubernetes service that makes it easy to run Kubernetes on AWS without need to install, operate and maintain your ow Kubernetes control pane. Supports Linux/Windows containers, supports many add-ons. 
@@ -878,15 +850,11 @@ Is a managed Kubernetes service that makes it easy to run Kubernetes on AWS with
 
 Supports many programming languages, has a completely automated administration, has an high built-in fault tolerance, supports orchestration of multiple functions and has a *pay-per-use* pricing.
 
-
-
 #### Event source
 
 Produces events that trigger an AWS Lambda function to run. Lambda can also **pull** records from an Amazon Simple queue service (SQS) queue and run a Lambda for each fetched message; Lambda can also read events from Dynamo DB.
 
 Use this for [reference](https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html).
-
-
 
 #### Function configuration
 
@@ -899,8 +867,6 @@ Every Lambda function has a **name**, **runtime environment** (for example pytho
 It's a PaaS that falicitates the quick *deployment*, *scaling* and *management* of your web applications and services. You only need to upload your code, choose the instance type, the database to use, set and adjust automatic scaling, update your application, access the server log files and enable HTTPS on the load balancer.
 
 You pay only for the underlying resources that are used.
-
-
 
 #### Deployments
 
@@ -934,8 +900,6 @@ When we create a bucket, it is associated with a *specific AWS Region*, when we 
 
 Use this for [reference](https://aws.amazon.com/s3/).
 
-
-
 **Storage classes**:
 
 * **standard**, designed for high durability, availability and performance object storage for *frequently accessed data*
@@ -951,8 +915,6 @@ Use this for [reference](https://aws.amazon.com/s3/).
 * **glacier deep archive**, low cost solution, allows long-term retention and digital preservation of data for data that can be accessed one or twice in a year
 
 Use this for [reference](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html).
-
-
 
 #### URL styles
 
@@ -977,8 +939,6 @@ When we upload our data, we *create* a bucket in an AWS Region and we can load *
 It is a simple, scalable, elastic file system for use with AWS services and On-Premises resources. It is designed to automatically grow and shrink.
 
 Works well for big data and analytics, media processing workflows, content management, web serving and home directories.
-
-
 
 #### Resources
 
@@ -1026,8 +986,6 @@ Every glacier is composed by:
 
 * **Vault access policy**, determine who *can* and *cannot* *access* data that is stored in the vault, and what *operation can* or *cannot* do
 
-
-
 -------------
 
 ### Lifecycle policies
@@ -1050,8 +1008,6 @@ Are typically provisioned in discrete portions as specified by the user, <u>you 
 
 The benefit to using an unmanaged service is that you have more fine-tuned control over how your solution handles changes in load, errors and situations where resources become unavailable.
 
-
-
 ## Managed services
 
 Require the user to configure them, require less configuration than *Unmanaged services*. Have good features such as scaling, fault-tolerance and availability, <u>handled automatically and internally by AWS</u>.
@@ -1064,25 +1020,17 @@ Is a **managed** service that sets up and operates a relational database in the 
 
 AWS also scales resources, manages power and servers, and performs maintenance.
 
-
-
 ### Database instance
 
 Is an isolated database environment that can contain *multiple user-create databases*. The resources in a database instance are determined by its database instance class, and the type of storage is dictated by the type of disks.
-
-
 
 ### RDS in a virtual private cloud (VPC)
 
 Usually the database is isolated in a *private subnet* and is only made directly accessible to indicated application instances. Keep in mind that when you select the subnet, you are also choosing the *Availability Zone* for your database instance.
 
-
-
 #### Multi-AZ deployment
 
 Can be configured to **automatically generate a standby copy** of the database instance in another *Availability Zone* within the same VPC. Transaction are synchronously replicated to the standby copy. Therefore, if the main database instance fails, *Amazon RDS* automatically brings the standby copy online.
-
-
 
 ### Read replicas
 
@@ -1096,8 +1044,6 @@ Can be configured to **automatically generate a standby copy** of the database i
 
 **RDB** works with structured data that is organized by tables, records, and columns. There are well-defined relationship between database tables. **SQL** (Structured query language). Relational databases <u>might</u> have difficulties scaling out horizontally or working with semistructured data, and <u>might</u> also require many joins for normalized data.
 
-
-
 ## Non-Relational databases
 
 Is any database that does not follow the relational model. They can scale out horizontally, and they can work with unstructured and semistructured data.
@@ -1107,8 +1053,6 @@ Is any database that does not follow the relational model. They can scale out ho
 ## DynamoDB
 
 Is a fast and flexible **NoSLQ** database for all applications that need consistent, single-digit-millisecond latency at any scale. Amazon manages all the underlying data infrastructure for this service and redundantly stores data across multiple facilities in a native *US Region* as part of the fault-tolerant architecture. Items in the same table can have different attributes. Can have global tables that enable you to <u>automatically replicate across AWS Regions, encryption at rest and item TTL</u>.
-
-
 
 #### Components
 
@@ -1121,8 +1065,6 @@ A DynamoDB have **tables** that are collections of data, **items** group of attr
 * **composite primary key**, composed by more attributes 
 
 Use this for [reference](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html#HowItWorks.CoreComponents.TablesItemsAttributes).
-
-
 
 #### Partitioning
 
@@ -1139,8 +1081,6 @@ As data grows, table data is partitioned and indexed by the primary key. You can
 Is a fully managed **data werehouse** that makes it simple and cost-effective **to analyze** all your data by using standard *SQL* and your existing business intelligence tools.
 
 Allows to run complex analytic queries against <u>petabytes</u> of structured data.
-
-
 
 ### Parallel processing architecture
 
@@ -1159,3 +1099,115 @@ Is a *MySQL* and *PostgreSQL* **compatible relational database** that is built f
 --------
 
 # Module 9
+
+#### Cloud architects
+
+Engage with decision makers to identify the business goal and the capabilities that need improvement, ensure alignment between technology deliverables of a solution and the business goals.
+
+---------
+
+## Well-Architected Framework
+
+Is a **guide** that is designed to help you build the most secure, high-performance, resilient and efficient infrastructure possible for your cloud applications and workloads. Provides a set of <u>foundational questions</u> and <u>best practices</u> that can help you evaluate and implement your cloud architectures.
+
+Use this for [reference](https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf).
+
+
+
+### Pillars
+
+* **Operational Excellence** focuses on the ability to *run and monitor systems* to deliver business value, and to continually improve supporting processes and procedures.
+  
+  Design principles:
+  
+  * *<u>Perform operations as code</u>*, define your workload as code and update it
+  
+  * *<u>Make frequent, small, reversible changes</u>*, design workloads to enable components to be updated regularly
+  
+  * *<u>Refine operations procedures frequently</u>*, look to opportunities to improve operations procedures
+  
+  * *<u>Anticipate failure</u>*, identify potential sources of failure so that they can be removed or mitigated
+  
+  * *<u>Learn from all operational failures</u>*, drive improvement through lessons learned from all operational events and failures
+  
+  
+
+* **Security** focuses on the ability to *protect information, systems, and assets* while delivering business value through risk assessments and mitigation strategies.
+  
+  Design principles:
+  
+  * *<u>Implement a strong identify foundation</u>*, implement the principle of **least privilege** and enforce **separation of duties** with appropriate authorization for each interaction with your AWS resources
+  
+  * *<u>Enable traceability</u>*, monitor, alert actions and changes to your environment in real time
+  
+  * *<u>Apply security at all layers</u>*, apply defense in depth and apply security controls to all layers of your architecture
+  
+  * *<u>Automate security pest practices</u>*, to improve your ability to securely scale more rapidly and cost effectively
+  
+  * <u>*Protect data in transit and at rest*</u>, classify your data into **sensitivity levels** and use mechanism such as encryption, tokenization and access control where appropriate
+  
+  * *<u>Keep people away from data</u>*, to reduce the risk of loss or modification of sensitive data due to human error
+  
+  * *<u>Prepare for security events</u>*
+
+
+
+* **Reliability** focuses on ensuring a workload performs its intended *function correctly and consistently* when it's expected to.
+  
+  Design principles:
+  
+  * <u>*Automatically recover from failure</u>*, monitor system for key performance indicators and configure your system to trigger an automated recovery
+  
+  * <u>*Test recovery procedures*</u>, test how your systems fail and validate your recovery procedures
+  
+  * *<u>Scale horizontally to increase aggregate workload availability</u>*
+  
+  * *<u>Stop guessing capacity</u>*, monitor demand and system usage, and automate the addiction or removal of resources
+  
+  * *<u>Manage change in automation</u>*, use automation to make changes to infrastructure and manage changes in automation
+
+
+
+* **Performance Efficiency** focuses on the ability to *use IT and computing resources efficiently* to meet system requirements, and to maintain that efficiency as demand changes or technologies evolve.
+  
+  Design principles:
+  
+  * *<u>Democratize advanced technologies</u>*, consume technologies as a service, to allow team to focus on product development instead of resource provisioning and management
+  
+  * *<u>Go global in minutes</u>*, deploy systems in **multiple AWS Regions** to provide lower latency and better customer experience at minimal cost
+  
+  * *<u>Use serverless architectures</u>*, in order to remove the operational burden of running and maintaining servers to carry out traditional computing activities
+  
+  * *<u>Experiment more often</u>*, perform comparative testing in different types of instances, storage and configurations
+  
+  * *<u>Consider mechanical sympathy</u>*, use technology approach that aligns best to what you are trying to achieve
+
+
+
+* **Cost Optimization** focuses on the ability to *avoid unnecessary costs*.
+  
+  Design principles:
+  
+  * *<u>Implement cloud financial management</u>*, to achieve financial success and accelerate business value realization in the cloud
+  
+  * *<u>Adopt a consumption model</u>*, pay only for the computing resources that you require
+  
+  * *<u>Measure overall efficiency</u>*, measure the business output of the workload and the costs that are associated with delivering it
+  
+  * <u>*Stop spending money on undifferentiated heavy lifting*</u>, don't waste money in racking, stacking and powering servers
+  
+  * *<u>Analyze and attribute expenditure</u>*, having this capability helps you measure return of investment (*ROI*)
+
+---
+
+## AWS Trusted Advisor
+
+Is an online tool that provides real-time guidance to help you provision your resources following AWS best practices. Looks at the entire AWS environment and **gives you real-time recommendations** in 5 categories: *Cost optimization*, *Performance*, *Security*, *Fault tolerance* and *Service limits*.
+
+Use this for [reference](https://docs.aws.amazon.com/awssupport/latest/user/trusted-advisor-check-reference.html).
+
+----
+
+---
+
+# Module 10
