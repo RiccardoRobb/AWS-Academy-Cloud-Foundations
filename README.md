@@ -1226,8 +1226,54 @@ Use this for [reference](https://aws.amazon.com/elasticloadbalancing/features/?n
 
 
 
-
-
 To use a load balancer you need to register **targets in target groups**. Load balancer *performs health checks* to monitor health of registred targets.
 
 You also need to specify one or more **listeners**, every listener is a process that checks for connection requests. It is configured with a <u>protocol and port number</u> for connections from load balancer to the targets
+
+### Load balancer monitoring
+
+* **CloudWatch metrics**, enables to retrieve statistics about data points as an ordered set of time series data, known as metrics. 
+  
+  You can also setup **alarms** based on static threshold, you choose a CloudWatch metric for the alarm to watch and the threshold for that metric.
+  
+  See this [example](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html).
+  
+  
+
+* **Access logs**, can be used to capture detailed information about the requests that were made to your load balancer and store them as log files.
+  
+  
+
+* **CloudTrail logs**, can be used to capture detailed information about the calls that were made to the *Elastic Load Balancing* application programming interface *API* and store them as log files in *Amazon S3*.
+
+----
+
+## EC2 Auto Scaling
+
+Is an AWS service that helps you maintain application availability and enables you to **automatically add or remove** *EC2* instances according to conditions you define. You can use *fleet management features* of EC2 Auto Scaling to maintain the health and availability of your fleet. 
+
+You can also add or remove EC2 instances manually, on a schedule, in response to changing demand or in combination with AWS Auto Scaling for predictive scaling.
+
+Use this for [reference](https://aws.amazon.com/ec2/autoscaling).
+
+
+
+#### Auto Scaling groups
+
+Are a collection of EC2 instances that are treated as a logical grouping for the purposes of automatic scaling and management. The size is specified as *desired capacity*.
+
+You can specify the minimum number of instances in each Auto Scaling group, EC2 Auto Scaling is designed to prevent your group from going below the size or above the maximum size.
+
+Use this for [reference](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html).
+
+
+
+How it works?
+
+<img src="./pictures/Scaling.png" title="" alt="Scaling" data-align="center">
+
+See more about [*launch configurations*](https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-configurations.html).
+
+-------
+
+Author: [Riccardo Ruberto](https://github.com/RiccardoRobb)
