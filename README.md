@@ -1,3 +1,5 @@
+![Badge](./pictures/badge.png)
+
 # Module 1
 
 Cloud computing is the on-demand delivery of IT resources via the internet with a *pay-as-you-go* pricing.
@@ -1112,8 +1114,6 @@ Is a **guide** that is designed to help you build the most secure, high-performa
 
 Use this for [reference](https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf).
 
-
-
 ### Pillars
 
 * **Operational Excellence** focuses on the ability to *run and monitor systems* to deliver business value, and to continually improve supporting processes and procedures.
@@ -1129,8 +1129,6 @@ Use this for [reference](https://d1.awsstatic.com/whitepapers/architecture/AWS_W
   * *<u>Anticipate failure</u>*, identify potential sources of failure so that they can be removed or mitigated
   
   * *<u>Learn from all operational failures</u>*, drive improvement through lessons learned from all operational events and failures
-  
-  
 
 * **Security** focuses on the ability to *protect information, systems, and assets* while delivering business value through risk assessments and mitigation strategies.
   
@@ -1150,8 +1148,6 @@ Use this for [reference](https://d1.awsstatic.com/whitepapers/architecture/AWS_W
   
   * *<u>Prepare for security events</u>*
 
-
-
 * **Reliability** focuses on ensuring a workload performs its intended *function correctly and consistently* when it's expected to.
   
   Design principles:
@@ -1166,8 +1162,6 @@ Use this for [reference](https://d1.awsstatic.com/whitepapers/architecture/AWS_W
   
   * *<u>Manage change in automation</u>*, use automation to make changes to infrastructure and manage changes in automation
 
-
-
 * **Performance Efficiency** focuses on the ability to *use IT and computing resources efficiently* to meet system requirements, and to maintain that efficiency as demand changes or technologies evolve.
   
   Design principles:
@@ -1181,8 +1175,6 @@ Use this for [reference](https://d1.awsstatic.com/whitepapers/architecture/AWS_W
   * *<u>Experiment more often</u>*, perform comparative testing in different types of instances, storage and configurations
   
   * *<u>Consider mechanical sympathy</u>*, use technology approach that aligns best to what you are trying to achieve
-
-
 
 * **Cost Optimization** focuses on the ability to *avoid unnecessary costs*.
   
@@ -1224,8 +1216,6 @@ Types:
 
 Use this for [reference](https://aws.amazon.com/elasticloadbalancing/features/?nc=sn&loc=2).
 
-
-
 To use a load balancer you need to register **targets in target groups**. Load balancer *performs health checks* to monitor health of registred targets.
 
 You also need to specify one or more **listeners**, every listener is a process that checks for connection requests. It is configured with a <u>protocol and port number</u> for connections from load balancer to the targets
@@ -1237,12 +1227,8 @@ You also need to specify one or more **listeners**, every listener is a process 
   You can also setup **alarms** based on static threshold, you choose a CloudWatch metric for the alarm to watch and the threshold for that metric.
   
   See this [example](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html).
-  
-  
 
 * **Access logs**, can be used to capture detailed information about the requests that were made to your load balancer and store them as log files.
-  
-  
 
 * **CloudTrail logs**, can be used to capture detailed information about the calls that were made to the *Elastic Load Balancing* application programming interface *API* and store them as log files in *Amazon S3*.
 
@@ -1256,8 +1242,6 @@ You can also add or remove EC2 instances manually, on a schedule, in response to
 
 Use this for [reference](https://aws.amazon.com/ec2/autoscaling).
 
-
-
 #### Auto Scaling groups
 
 Are a collection of EC2 instances that are treated as a logical grouping for the purposes of automatic scaling and management. The size is specified as *desired capacity*.
@@ -1265,8 +1249,6 @@ Are a collection of EC2 instances that are treated as a logical grouping for the
 You can specify the minimum number of instances in each Auto Scaling group, EC2 Auto Scaling is designed to prevent your group from going below the size or above the maximum size.
 
 Use this for [reference](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html).
-
-
 
 How it works?
 
