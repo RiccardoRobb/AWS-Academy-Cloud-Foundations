@@ -1,6 +1,6 @@
 # Module 1
 
-Cloud computing is the on-demand delivery of IT resources via the internet with a *"pay-as-you-go"* pricing.
+Cloud computing is the on-demand delivery of IT resources via the internet with a *pay-as-you-go* pricing.
 
 Almost anything you can implement with traditional IT can be implemented as an AWS cloud computing service.
 
