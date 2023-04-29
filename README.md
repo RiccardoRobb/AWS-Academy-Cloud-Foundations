@@ -878,7 +878,7 @@ Supports web applications written in *Java*, *.NET*, *PHP*, *Node.js*, *Phyton*,
 
 --------
 
-# Modeule 7
+# Module 7
 
 ## Elastic Block store (EBS)
 
